@@ -3,24 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; frame-src 'self'; base-uri 'none'; form-action 'self'">
 <meta name="referrer" content="no-referrer">
 <title>About · Emet</title>
 <meta name="description" content="About the Emet site and its sources.">
 <link rel="stylesheet" href="../style.css">
 </head>
-<body>
+<body class="doc">
 <header class="top"><div class="top-inner">
-  <a class="brand" href="../">Emet <span lang="he">אמת</span></a>
+  <a class="brand" href="../index.html">Emet <span lang="he">אמת</span></a>
   <nav>
-    <a href="../">Claims</a>
-    <a href="../books/">Books</a>
-    <a href="../verses/">Passages</a>
-    <a href="../about/">About</a>
+    <a href="../index.html">Claims</a>
+    <a href="../verses/index.html">Passages</a>
+    <a href="../about/index.html">About</a>
   </nav>
-  <form class="top-search" role="search" action="../" method="get">
+  <form class="top-search" role="search" action="../index.html" method="get">
     <label class="visually-hidden" for="top-q">Search claims</label>
-    <input id="top-q" type="search" name="q" placeholder="Search claims or a number" autocomplete="off">
+    <input id="top-q" type="search" name="q" placeholder="Search, or a claim number" autocomplete="off">
     <button type="submit">Search</button>
   </form>
 </div></header>
@@ -40,9 +39,10 @@ A verified passage is marked &#10003;.</li>
 <h2>Finding a claim</h2>
 <ul>
 <li>Type a claim's number after the site's address, for example <code>/42</code>.</li>
-<li>Use the search box: a number takes you straight to that claim; words or a verse
-(for example <em>virgin</em> or <em>Isaiah 53</em>) list every claim that mentions them.</li>
-<li>Or browse <a href="../books/">by book</a> or <a href="../verses/">by TaNaKh passage</a>.</li>
+<li>On the <a href="../index.html">front page</a>, search by number, words or verse, and filter by book:
+claims that cite the book, or that are answered from it. On a wide screen the claim you pick
+opens in a reader beside the list.</li>
+<li>Or look up a passage in the <a href="../verses/index.html">passage index</a>.</li>
 </ul>
 <h2>Status</h2>
 <p class="draft">UNVERIFIED DRAFT (2026-11-13). Listed from general knowledge of the passages usually cited on each side. Not yet checked against Rabbi Singer or any other rabbinic source, and not attributed to anyone.</p>
@@ -57,14 +57,14 @@ A verified passage is marked &#10003;.</li>
 verse numbering. For a modern translation and Rashi's commentary, follow the Chabad.org link
 beside each passage.</p>
 <h2>Privacy and safety</h2>
-<p>This site is plain HTML, one stylesheet, and one short script that filters the list of
-claims as you type in the search box. It sets no cookies, collects nothing, sends nothing,
+<p>This site is static: plain HTML pages, one stylesheet, and one short script that runs the
+search and filters on the front page. It sets no cookies, collects nothing, sends nothing,
 and loads nothing from any other website. Each page carries a Content Security Policy that
 tells the browser to enforce this.</p>
 </main>
 <footer>
   <p><strong>Unverified draft.</strong> Verse lists have not yet been checked against
-  Rabbi Singer or any other rabbinic source. <a href="../about/">About this site</a>.</p>
+  Rabbi Singer or any other rabbinic source. <a href="../about/index.html">About this site</a>.</p>
 </footer>
 </body>
 </html>

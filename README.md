@@ -10,13 +10,19 @@ it, for example `https://<your-site>/42`, and sees:
   with the verses the claim cites highlighted in their context, and links to
   each chapter on Chabad.org (with Rashi) and Sefaria.
 
-There are 188 claims (C-001 to C-188) and 586 TaNaKh passages. Ways to find one:
+There are 188 claims (C-001 to C-188) and 586 TaNaKh passages.
 
-- type the number after the address (`/42`, `/042` and `/C-042` all work);
-- the search box on every page: a number opens that claim, and words or a
-  verse (`virgin`, `Isaiah 53`) list every claim that mentions them;
-- browse by book at `/books/` (claims that cite a book, and claims answered from it);
-- browse by TaNaKh passage at `/verses/`.
+**In a debate:** type the number after the address (`/42`, `/042` and `/C-042`
+all work), or type it in any search box and press Enter.
+
+**For research:** the front page is a workbench. Search by words or verse
+(`virgin`, `Isaiah 53`; matches are highlighted), pick a book from the list,
+and choose whether the claim *cites* that book or is *answered* from it. On a
+wide screen the claim you pick opens in a reader beside the list, and the up
+and down arrow keys step through the results. The whole view is kept in the
+address, so it can be bookmarked or shared, for example
+`/?book=isaiah&in=answers`. There is also an index of every TaNaKh passage at
+`/verses/`.
 
 > **Status: unverified draft.** The passage lists were compiled from general
 > knowledge of the passages usually cited on each side. They have not yet been
@@ -33,14 +39,14 @@ data/chabad_chapters.json   Chabad.org chapter IDs, used to build links
 data/texts/tanakh.json      Hebrew + JPS 1917 English text (downloaded, public domain)
 data/texts/kjv.json         King James Version text (downloaded, public domain)
 site/style.css              the one stylesheet
-site/search.js              the one script: filters the claim list as you type
+site/workbench.js           the one script: search, filters and reader on the front page
 build.py                    turns the data into the website (standard-library Python)
 tools/fetch_texts.py        downloads verse text for newly added chapters
 docs/                       the generated website; GitHub Pages serves this folder
 ```
 
-The finished site is plain HTML and CSS plus one short, commented script for
-the search box. It has no cookies, no tracking, and loads nothing from any
+The finished site is static: plain HTML and CSS plus one short, commented
+script for the front page's search, filters and reader pane. It has no cookies, no tracking, and loads nothing from any
 other website. Everything else works without the script.
 
 ## Putting it on GitHub Pages (free)
@@ -131,7 +137,9 @@ goes up.
 python3 -m http.server --directory docs 8000
 ```
 
-Then open http://localhost:8000/ in a browser.
+Then open http://localhost:8000/ in a browser. You can also just double-click
+`docs/index.html`: every link points at a file, so the site works from disk
+too (the short `/42` addresses need a web server, as on GitHub Pages).
 
 ## Where the data came from
 
