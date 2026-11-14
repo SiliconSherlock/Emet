@@ -32,6 +32,9 @@ ROOT = Path(__file__).resolve().parent
 DATA = ROOT / "data"
 OUT = ROOT / "docs"
 SCRIPT = "workbench.js"
+# The book, made by tools/build_book.py, published as a download if it exists.
+BOOK_SRC = ROOT / "book" / "Emet.pdf"
+BOOK = "Emet.pdf"
 
 # One policy for every page. Scripts, styles and frames may come only from this
 # site (there is exactly one script, workbench.js, and one frame, the reader
@@ -192,7 +195,7 @@ def page(title, body, depth, description="", workbench=False):
   <nav>
     <a href="{home}"{' aria-current="page"' if workbench else ''}>Claims</a>
     <a href="{up}verses/">Passages</a>
-    <a href="{up}about/">About</a>
+    <a href="{up}about/">About</a>{book_link(up)}
   </nav>{search}
 </div></header>
 <main{' class="wide"' if workbench else ''}>
@@ -201,6 +204,13 @@ def page(title, body, depth, description="", workbench=False):
 </body>
 </html>
 """
+
+
+def book_link(up):
+    if not BOOK_SRC.exists():
+        return ""
+    size = f"{BOOK_SRC.stat().st_size / 1_000_000:.0f} MB"
+    return f'\n    <a class="book" href="{up}{BOOK}" download title="Download the book, PDF, {size}">Book (PDF)</a>'
 
 
 def panel(title, body, up):
@@ -599,6 +609,10 @@ case the Hebrew text is on the page to compare.</li>
 {counts['verified']} of {counts['passages']} have been verified against that source.
 A verified passage is marked &#10003;.</li>
 </ul>
+<h2>The book</h2>
+<p>Everything on this site is also available as a book to read or print: one claim per page, the
+Hebrew and English side by side verse by verse, with contents and an index.
+<a href="../{BOOK}" download>Download the book (PDF)</a>.</p>
 <h2>Finding a claim</h2>
 <ul>
 <li>Type a claim's number after the site's address, for example <code>/42</code>.</li>
@@ -770,12 +784,34 @@ FORBIDDEN_JS = [
 ]
 
 
+# PDF features that can run code, open files, or reach other websites. The
+# book needs none of them; its only links go to its own pages.
+FORBIDDEN_PDF = re.compile(rb"/(JavaScript|JS|Launch|EmbeddedFile|EmbeddedFiles|URI|OpenAction|AA|"
+                           rb"SubmitForm|ImportData|RichMedia|XFA|GoToR|GoToE|Sound|Movie)(?![A-Za-z0-9+])")
+
+
+def check_book(path, rel):
+    """The one PDF allowed: an exact copy of book/Emet.pdf with no active content."""
+    problems = []
+    raw = path.read_bytes()
+    if rel != BOOK or not BOOK_SRC.exists() or raw != BOOK_SRC.read_bytes():
+        problems.append(f"docs/{rel}: unexpected PDF (only {BOOK}, copied from book/{BOOK}, is allowed)")
+    if not raw.startswith(b"%PDF-"):
+        problems.append(f"docs/{rel}: not a PDF")
+    for name in sorted({m.decode() for m in FORBIDDEN_PDF.findall(raw)}):
+        problems.append(f"docs/{rel}: PDF contains /{name}")
+    return problems
+
+
 def check_output():
     problems = []
     for path in sorted(OUT.rglob("*")):
         if path.is_dir():
             continue
         rel = path.relative_to(OUT).as_posix()
+        if path.suffix == ".pdf":
+            problems.extend(check_book(path, rel))
+            continue
         text = path.read_text("utf-8")
         if path.suffix == ".js":
             if rel != SCRIPT or text != (ROOT / "site" / SCRIPT).read_text("utf-8"):
@@ -843,6 +879,8 @@ def main():
     (OUT / ".nojekyll").write_text("")  # serve files as-is, no Jekyll processing
     shutil.copy(ROOT / "site" / "style.css", OUT / "style.css")
     shutil.copy(ROOT / "site" / SCRIPT, OUT / SCRIPT)
+    if BOOK_SRC.exists():
+        shutil.copy(BOOK_SRC, OUT / BOOK)
 
     claims = doc["claims"]
     for i, claim in enumerate(claims):

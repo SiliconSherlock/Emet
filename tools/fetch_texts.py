@@ -95,6 +95,7 @@ def clean(text):
     text = re.sub(r"<[^>]+>", "", text)
     text = html.unescape(text)
     text = re.sub(r"\{[פס]\}", "", text)  # open/closed paragraph markers
+    text = re.sub(r"(?<=s)’(?=[a-z])", "’ ", text)  # "fathers’houses" -> "fathers’ houses"
     return re.sub(r"\s+", " ", text).strip()
 
 
@@ -160,6 +161,10 @@ def main():
         save(KJV_OUT, kjv)
         time.sleep(2.5)  # bible-api.com asks clients to stay under ~15 requests / 30 s
 
+    # Tidy text downloaded before the space fix in clean() was added.
+    for chapters in tanakh.values():
+        for chapter in chapters.values():
+            chapter["en"] = [re.sub(r"(?<=s)’(?=[a-z])", "’ ", v) for v in chapter["en"]]
     for book, ch, verse, wrong, right in JPS_FIXES:
         verses = tanakh.get(book, {}).get(str(ch), {}).get("en")
         if verses and wrong in verses[verse - 1]:

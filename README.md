@@ -148,13 +148,33 @@ lecture, book page, or article), set:
 The passage then shows a ✓ and the source, and the count on the About page
 goes up.
 
+## The book (PDF)
+
+`book/Emet.pdf` is the same content laid out as a book for reading and
+printing: US Letter pages, one claim per page (continuing as needed), the
+Hebrew and the JPS 1917 English side by side verse by verse, a contents list
+with page numbers, an index of passages by book, and PDF bookmarks for every
+claim. Rebuild it after changing the data:
+
+```bash
+python3 tools/build_book.py
+```
+
+Then run `python3 build.py` so the site publishes the new copy: the
+website offers it as "Book (PDF)" in the top menu.
+
+It needs Google Chrome (or Chromium) installed, which it runs without a
+window to turn `book/emet-book.html` into the PDF; nothing is downloaded. The
+layout is in `site/book.css` (page size, fonts, margins). The book uses the
+Mac's Iowan Old Style and New Peninim MT fonts, with standard fallbacks
+elsewhere.
+
 ## Research notes
 
-`research/singer-comparison.md` compares every claim with Rabbi Singer's
-articles on outreachjudaism.org: which claims he addresses, and which other
-passages he cites. It is a working aid for checking the passage lists. It is
-not part of the website, which deliberately holds only verse citations
-against verse citations: no articles, sources of commentary, or links.
+`tools/review_list.py` writes a verification checklist to `research/`. That
+folder holds private working notes and is not kept in the repository (see
+`.gitignore`). The website deliberately holds only verse citations against
+verse citations: no articles, sources of commentary, or links.
 
 ## Previewing on your own computer
 

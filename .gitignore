@@ -2,4 +2,8 @@
 __pycache__/
 *.pyc
 .claude/
-Emet.pdf
+/Emet.pdf
+book/emet-book.html
+book/book.css
+book/.chrome-profile/
+/research/

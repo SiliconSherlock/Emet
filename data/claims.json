@@ -48,6 +48,27 @@
           "role": "reply",
           "verified": false,
           "source": null
+        },
+        {
+          "book": "Genesis",
+          "ref": "24:43",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Exodus",
+          "ref": "2:8",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Proverbs",
+          "ref": "30:19",
+          "role": "reply",
+          "verified": false,
+          "source": null
         }
       ]
     },
@@ -82,6 +103,20 @@
           "ref": "5:1-5",
           "role": "context",
           "kjv": "5:2-6",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Chronicles I",
+          "ref": "4:4",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Samuel I",
+          "ref": "17:12",
+          "role": "reply",
           "verified": false,
           "source": null
         }
@@ -304,6 +339,22 @@
           "kjv": "22:18",
           "verified": false,
           "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "22:2-12",
+          "role": "context",
+          "kjv": "22:1-11",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "22:20-25",
+          "role": "reply",
+          "kjv": "22:19-24",
+          "verified": false,
+          "source": null
         }
       ]
     },
@@ -509,6 +560,13 @@
           "role": "cited",
           "verified": false,
           "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "110:1-7",
+          "role": "context",
+          "verified": false,
+          "source": null
         }
       ]
     },
@@ -571,6 +629,20 @@
         {
           "book": "Proverbs",
           "ref": "31:2",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "2:10-12",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "24:4",
           "role": "reply",
           "verified": false,
           "source": null
@@ -693,6 +765,13 @@
           "book": "Deuteronomy",
           "ref": "18:20-22",
           "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Deuteronomy",
+          "ref": "34:10-12",
+          "role": "reply",
           "verified": false,
           "source": null
         }
@@ -1028,6 +1107,13 @@
           "role": "reply",
           "verified": false,
           "source": null
+        },
+        {
+          "book": "Kings I",
+          "ref": "22:19",
+          "role": "reply",
+          "verified": false,
+          "source": null
         }
       ]
     },
@@ -1193,6 +1279,13 @@
           "role": "reply",
           "verified": false,
           "source": null
+        },
+        {
+          "book": "Ezekiel",
+          "ref": "18:21-22",
+          "role": "reply",
+          "verified": false,
+          "source": null
         }
       ]
     },
@@ -1217,6 +1310,13 @@
           "book": "Habakkuk",
           "ref": "2:4",
           "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Exodus",
+          "ref": "17:12",
+          "role": "reply",
           "verified": false,
           "source": null
         }
@@ -1805,6 +1905,13 @@
           "role": "reply",
           "verified": false,
           "source": null
+        },
+        {
+          "book": "Jeremiah",
+          "ref": "36:30",
+          "role": "reply",
+          "verified": false,
+          "source": null
         }
       ]
     },
@@ -1826,6 +1933,13 @@
         {
           "book": "Jeremiah",
           "ref": "33:16",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Ezekiel",
+          "ref": "48:35",
           "role": "reply",
           "verified": false,
           "source": null
@@ -1853,6 +1967,13 @@
           "role": "cited",
           "verified": false,
           "source": null
+        },
+        {
+          "book": "Proverbs",
+          "ref": "30:1-6",
+          "role": "context",
+          "verified": false,
+          "source": null
         }
       ]
     },
@@ -1878,6 +1999,13 @@
           "ref": "45:7-8",
           "role": "cited",
           "kjv": "45:6-7",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Exodus",
+          "ref": "7:1",
+          "role": "reply",
           "verified": false,
           "source": null
         }
@@ -2051,6 +2179,20 @@
           "book": "Isaiah",
           "ref": "42:1-4",
           "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "42:19",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "44:1-2",
+          "role": "reply",
           "verified": false,
           "source": null
         }
@@ -2722,6 +2864,13 @@
           "role": "context",
           "verified": false,
           "source": null
+        },
+        {
+          "book": "Jeremiah",
+          "ref": "11:19",
+          "role": "reply",
+          "verified": false,
+          "source": null
         }
       ]
     },
@@ -2745,6 +2894,13 @@
           "book": "Isaiah",
           "ref": "53:8",
           "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Ezekiel",
+          "ref": "37:11-12",
+          "role": "reply",
           "verified": false,
           "source": null
         }
@@ -2796,6 +2952,13 @@
           "role": "context",
           "verified": false,
           "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "44:1-3",
+          "role": "reply",
+          "verified": false,
+          "source": null
         }
       ]
     },
@@ -2819,6 +2982,13 @@
           "book": "Isaiah",
           "ref": "53:11",
           "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Daniel",
+          "ref": "12:3",
+          "role": "reply",
           "verified": false,
           "source": null
         }
@@ -2976,6 +3146,14 @@
           "ref": "31:6",
           "role": "cited",
           "kjv": "31:5",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "31:11",
+          "role": "reply",
+          "kjv": "31:10",
           "verified": false,
           "source": null
         }
@@ -3296,6 +3474,34 @@
         {
           "book": "Isaiah",
           "ref": "8:10",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "7:14-16",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Genesis",
+          "ref": "24:43",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Exodus",
+          "ref": "2:8",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Proverbs",
+          "ref": "30:19",
           "role": "reply",
           "verified": false,
           "source": null
@@ -3695,6 +3901,13 @@
           "ref": "3:5",
           "role": "cited",
           "kjv": "2:32",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "42:8",
+          "role": "reply",
           "verified": false,
           "source": null
         }
@@ -4209,6 +4422,13 @@
           "role": "cited",
           "verified": false,
           "source": null
+        },
+        {
+          "book": "Chronicles II",
+          "ref": "6:42",
+          "role": "reply",
+          "verified": false,
+          "source": null
         }
       ]
     },
@@ -4607,6 +4827,13 @@
           "book": "Genesis",
           "ref": "22:2",
           "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Jeremiah",
+          "ref": "7:31",
+          "role": "reply",
           "verified": false,
           "source": null
         }
@@ -5067,6 +5294,13 @@
           "role": "cited",
           "verified": false,
           "source": null
+        },
+        {
+          "book": "Micah",
+          "ref": "3:8",
+          "role": "reply",
+          "verified": false,
+          "source": null
         }
       ]
     },
@@ -5089,6 +5323,14 @@
           "book": "Isaiah",
           "ref": "63:9-10",
           "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "51:13",
+          "role": "reply",
+          "kjv": "51:11",
           "verified": false,
           "source": null
         }
@@ -5576,6 +5818,13 @@
           "role": "cited",
           "verified": false,
           "source": null
+        },
+        {
+          "book": "Genesis",
+          "ref": "4:7",
+          "role": "reply",
+          "verified": false,
+          "source": null
         }
       ]
     },
@@ -5600,6 +5849,13 @@
           "ref": "51:7",
           "role": "cited",
           "kjv": "51:5",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Ecclesiastes",
+          "ref": "7:29",
+          "role": "reply",
           "verified": false,
           "source": null
         }
@@ -5645,6 +5901,13 @@
         {
           "book": "Deuteronomy",
           "ref": "30:15-19",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Ecclesiastes",
+          "ref": "7:29",
           "role": "reply",
           "verified": false,
           "source": null

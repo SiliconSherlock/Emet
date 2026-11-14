@@ -129,6 +129,8 @@ h2 { font-family: var(--sans); font-size: 1.15rem; margin: 2.25rem 0 .75rem; }
 .top nav { display: flex; flex-wrap: wrap; gap: .25rem 1rem; font-size: .95rem; }
 .top nav a { color: var(--bar-link); text-decoration: none; }
 .top nav a:hover, .top nav a[aria-current] { color: var(--bar-fg); }
+.top nav a.book { color: var(--bar-fg); border: 1px solid rgba(255, 255, 255, .35); border-radius: 999px; padding: 0 .6rem; }
+.top nav a.book:hover { background: rgba(255, 255, 255, .12); text-decoration: none; }
 .top nav a[aria-current] { font-weight: 600; }
 
 footer {
