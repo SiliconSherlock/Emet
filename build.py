@@ -8,6 +8,7 @@ Reads   data/claims.json            the claims and the passages listed against t
         data/texts/kjv.json         King James Version text (public domain)
         data/chabad_chapters.json   Chabad.org chapter IDs, for links
         site/style.css              the one stylesheet
+        site/search.js              the one script (the search box)
 Writes  docs/                       the finished website (GitHub Pages serves this folder)
 
 Uses only the Python standard library and does not touch the network.
@@ -15,8 +16,8 @@ Uses only the Python standard library and does not touch the network.
 Every piece of text from the data files is HTML-escaped before it is written,
 so nothing in the data can add markup or scripts to a page. When it finishes,
 the build runs check_output() over everything it wrote and refuses to finish
-if any page contains a script, an inline event handler, an iframe/object/embed,
-or loads anything from another website.
+if any page contains a script other than site/search.js, an inline event
+handler, an iframe/object/embed, or loads anything from another website.
 """
 
 import html
@@ -30,16 +31,19 @@ ROOT = Path(__file__).resolve().parent
 DATA = ROOT / "data"
 OUT = ROOT / "docs"
 
-# One policy for every page: no scripts, nothing loaded from other sites,
-# no forms. Links to other sites (Chabad.org, Sefaria) still work as links.
-CSP = ("default-src 'none'; style-src 'self'; img-src 'self'; "
-       "base-uri 'none'; form-action 'none'")
+# One policy for every page. Scripts and styles may come only from this site
+# (there is exactly one script, search.js). Nothing else may be loaded, and the
+# browser blocks all network requests from the script (default-src 'none').
+# Search boxes may submit only to this site. Links to Chabad.org and Sefaria
+# still work as ordinary links.
+CSP = ("default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; "
+       "base-uri 'none'; form-action 'self'")
 
 ROLE_ORDER = {"cited": 0, "context": 1, "reply": 2}
-ROLE_LABEL = {
+ROLE_GROUP = {
     "cited": "The verse the claim cites",
-    "context": "The verses around it",
-    "reply": "Also commonly cited in Orthodox responses",
+    "context": "Read it in context",
+    "reply": "Also cited in Orthodox responses",
 }
 
 REF_RE = re.compile(r"^(?P<c1>\d+):(?P<v1>\d+)(?:-(?:(?P<c2>\d+):)?(?P<v2>\d+))?$")
@@ -50,6 +54,34 @@ SEFARIA_BOOK = {
     "Kings I": "I Kings", "Kings II": "II Kings",
     "Chronicles I": "I Chronicles", "Chronicles II": "II Chronicles",
 }
+
+# Citations use King James book names; TaNaKh passages use Chabad.org names.
+# Book pages use the Chabad.org name for TaNaKh books.
+KJV_TO_TANAKH = {
+    "1 Samuel": "Samuel I", "2 Samuel": "Samuel II",
+    "1 Kings": "Kings I", "2 Kings": "Kings II",
+    "1 Chronicles": "Chronicles I", "2 Chronicles": "Chronicles II",
+    "Song of Solomon": "Song of Songs",
+}
+TANAKH_TO_KJV = {v: k for k, v in KJV_TO_TANAKH.items()}
+
+BOOK_GROUPS = [
+    ("Torah", ["Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy"]),
+    ("Prophets", ["Joshua", "Judges", "Samuel I", "Samuel II", "Kings I", "Kings II",
+                  "Isaiah", "Jeremiah", "Ezekiel", "Hosea", "Joel", "Amos", "Obadiah",
+                  "Jonah", "Micah", "Nahum", "Habakkuk", "Zephaniah", "Haggai",
+                  "Zechariah", "Malachi"]),
+    ("Writings", ["Psalms", "Proverbs", "Job", "Song of Songs", "Ruth", "Lamentations",
+                  "Ecclesiastes", "Esther", "Daniel", "Ezra", "Nehemiah",
+                  "Chronicles I", "Chronicles II"]),
+    ("New Testament", ["Matthew", "Mark", "Luke", "John", "Acts", "Romans",
+                       "1 Corinthians", "2 Corinthians", "Galatians", "Ephesians",
+                       "Philippians", "Colossians", "1 Thessalonians", "2 Thessalonians",
+                       "1 Timothy", "2 Timothy", "Titus", "Philemon", "Hebrews", "James",
+                       "1 Peter", "2 Peter", "1 John", "2 John", "3 John", "Jude",
+                       "Revelation"]),
+]
+BOOK_ORDER = [b for _, books in BOOK_GROUPS for b in books]
 
 
 def esc(text):
@@ -62,6 +94,16 @@ def load(name):
 
 def claim_number(claim_id):
     return int(claim_id.split("-")[1])
+
+
+def slug(book):
+    return book.lower().replace(" ", "-")
+
+
+def cite_book(cite):
+    """The book a citation is from, under its book-page name."""
+    book = CITE_RE.match(cite)["book"]
+    return KJV_TO_TANAKH.get(book, book)
 
 
 # ---------------------------------------------------------------- references
@@ -102,9 +144,18 @@ def sefaria_url(book, ref):
 
 # ---------------------------------------------------------------- page parts
 
-def page(title, body, depth, description=""):
+def page(title, body, depth, description="", header_search=True, script=False):
     """Wrap `body` in the shared page frame. `depth` = folders below docs/."""
     up = "../" * depth
+    home = up or "./"
+    search = f"""
+  <form class="top-search" role="search" action="{home}" method="get">
+    <label class="visually-hidden" for="top-q">Search claims</label>
+    <input id="top-q" type="search" name="q" placeholder="Search claims or a number" autocomplete="off">
+    <button type="submit">Search</button>
+  </form>""" if header_search else ""
+    # Only the front page loads the script; every other page has none.
+    js = '\n<script src="search.js" defer></script>' if script else ""
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -114,17 +165,18 @@ def page(title, body, depth, description=""):
 <meta name="referrer" content="no-referrer">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(description)}">
-<link rel="stylesheet" href="{up}style.css">
+<link rel="stylesheet" href="{up}style.css">{js}
 </head>
 <body>
-<header class="top">
-  <a class="brand" href="{up or './'}">Emet</a>
+<header class="top"><div class="top-inner">
+  <a class="brand" href="{home}">Emet <span lang="he">אמת</span></a>
   <nav>
-    <a href="{up or './'}">All claims</a>
-    <a href="{up}verses/">By verse</a>
+    <a href="{home}">Claims</a>
+    <a href="{up}books/">Books</a>
+    <a href="{up}verses/">Passages</a>
     <a href="{up}about/">About</a>
-  </nav>
-</header>
+  </nav>{search}
+</div></header>
 <main>
 {body}
 </main>
@@ -153,58 +205,57 @@ def passage_html(p, tanakh, chabad, highlight):
     verses = verse_list(ref, {c: t["en"] for c, t in chapters.items()})
     multi_chapter = len({c for c, _ in verses}) > 1
 
-    meta = [f'<span class="role role-{p["role"]}">{esc(ROLE_LABEL[p["role"]])}</span>']
+    badges = []
     if p.get("kjv"):
-        meta.append(f'<span class="kjvnum">KJV numbers this {esc(p["kjv"])}</span>')
+        badges.append(f'<span class="badge">KJV: {esc(p["kjv"])}</span>')
     if p.get("verified"):
-        meta.append(f'<span class="verified" title="Verified against {esc(p.get("source") or "")}">'
-                    f'&#10003; verified</span>')
+        badges.append(f'<span class="badge verified">&#10003; verified</span>')
     note = f'<p class="note">{esc(p["note"])}</p>' if p.get("note") else ""
-    source = (f'<p class="source">Source: {esc(p["source"])}</p>' if p.get("source") else "")
+    source = f'<p class="source">Source: {esc(p["source"])}</p>' if p.get("source") else ""
 
     en = verses_html(verses, chapters, "en", highlight, multi_chapter)
     he = verses_html(verses, chapters, "he", highlight, multi_chapter)
-    links = (f'<p class="links"><a href="{esc(chabad_url(book, ref, chabad))}">Chabad.org with Rashi</a>'
-             f' · <a href="{esc(sefaria_url(book, ref))}">Sefaria</a></p>')
+    count = f'{len(verses)} verse{"s" if len(verses) != 1 else ""}'
+    title = f'<h4>{esc(book)} {esc(ref)}</h4>{"".join(badges)}'
 
-    text = f"""<div class="he" lang="he" dir="rtl">{he}</div>
+    inner = f"""<div class="p-body">
+{note}<div class="he" lang="he" dir="rtl">{he}</div>
 <div class="en">{en}</div>
-<p class="attrib">JPS 1917 translation. Hebrew and Chabad.org verse numbering.</p>"""
+{source}</div>
+<div class="p-foot">
+<span class="attrib">JPS 1917 · Hebrew verse numbering</span>
+<span class="links"><a class="btn" href="{esc(chabad_url(book, ref, chabad))}">Chabad.org + Rashi</a>
+<a class="btn" href="{esc(sefaria_url(book, ref))}">Sefaria</a></span>
+</div>"""
 
     # The verse the claim cites is always open. Context is folded away, and
     # long reply passages are too, so the page stays short on a phone.
-    is_open = p["role"] == "cited" or (p["role"] == "reply" and len(verses) <= 6)
-    heading = f'<h3>{esc(book)} {esc(ref)}</h3>'
-    if is_open:
+    if p["role"] == "cited" or (p["role"] == "reply" and len(verses) <= 6):
         return f"""<section class="passage {p['role']}">
-{heading}
-<p class="meta">{' '.join(meta)}</p>
-{note}{text}
-{source}{links}
+<div class="p-head">{title}</div>
+{inner}
 </section>"""
-    return f"""<section class="passage {p['role']}">
-<details>
-<summary>{heading}<span class="meta">{' '.join(meta)}</span><span class="count">{len(verses)} verses &middot; show</span></summary>
-{note}{text}
-{source}{links}
-</details>
-</section>"""
+    return f"""<details class="passage {p['role']}">
+<summary class="p-head">{title}<span class="count">{count}</span><span class="toggle"></span></summary>
+{inner}
+</details>"""
 
 
-def citation_html(cite, kjv):
+def citation_html(index, cite, kjv):
     m = CITE_RE.match(cite)
     book, ref = m["book"], m["ref"]
     chapters = kjv[book]
     verses = verse_list(ref, chapters)
     multi = len({c for c, _ in verses}) > 1
     body = verses_html(verses, chapters, None, set(), multi)
+    head = f'<h3>{esc(cite)}</h3><span class="ed">KJV</span>'
     if len(verses) > 8:
-        return f"""<details class="cite">
-<summary><h3>{esc(cite)} <span class="ed">KJV</span></h3><span class="count">{len(verses)} verses &middot; show</span></summary>
+        return f"""<details class="cite" id="cite-{index}">
+<summary class="cite-head">{head}<span class="count">{len(verses)} verses</span><span class="toggle"></span></summary>
 <blockquote>{body}</blockquote>
 </details>"""
-    return f"""<div class="cite">
-<h3>{esc(cite)} <span class="ed">KJV</span></h3>
+    return f"""<div class="cite" id="cite-{index}">
+<div class="cite-head">{head}</div>
 <blockquote>{body}</blockquote>
 </div>"""
 
@@ -213,14 +264,43 @@ def response_html(text):
     if not text.strip():
         return ""
     paras = "".join(f"<p>{esc(p.strip())}</p>" for p in text.split("\n\n") if p.strip())
-    return f'<section class="response"><h2>Response</h2>{paras}</section>'
+    return f'<section class="response card"><h2>Response</h2>{paras}</section>'
+
+
+def claim_books(claim):
+    """Every book a claim cites or is answered from, in canonical order."""
+    books = {cite_book(c) for c in claim["cited"]} | {p["book"] for p in claim["passages"]}
+    return sorted(books, key=BOOK_ORDER.index)
+
+
+def search_text(claim):
+    """Everything the search box should find this claim by, in lower case."""
+    parts = [claim["id"], str(claim_number(claim["id"])), claim["claim"], claim.get("response", "")]
+    for cite in claim["cited"]:
+        parts.append(cite)
+        parts.append(cite_book(cite))  # so "Samuel I" finds "1 Samuel 7:12"
+    for p in claim["passages"]:
+        parts.append(f'{p["book"]} {p["ref"]}')
+        parts.append(TANAKH_TO_KJV.get(p["book"], ""))  # so "1 Samuel" finds "Samuel I"
+        parts.extend(p.get(k) or "" for k in ("kjv", "note", "source"))
+    return " ".join(x for x in parts if x).lower()
+
+
+def claim_card(claim, up, refs=None, searchable=False):
+    """One claim as a card in a list. `refs` replaces the line of citations."""
+    n = claim_number(claim["id"])
+    line = refs if refs is not None else "Cites " + " · ".join(claim["cited"])
+    data = f' data-n="{n}" data-search="{esc(search_text(claim))}"' if searchable else ""
+    return (f'<li{data}><a class="card claim-card" href="{up}{n}/">'
+            f'<span class="id">{esc(claim["id"])}</span>'
+            f'<span class="text">{esc(claim["claim"])}</span>'
+            f'<span class="refs">{esc(line)}</span></a></li>')
 
 
 # ---------------------------------------------------------------- pages
 
 def claim_page(i, claims, tanakh, kjv, chabad, status_note):
     claim = claims[i]
-    n = claim_number(claim["id"])
     passages = sorted(claim["passages"], key=lambda p: ROLE_ORDER[p["role"]])
 
     # Verses the claim itself cites, highlighted wherever they appear in a
@@ -231,26 +311,48 @@ def claim_page(i, claims, tanakh, kjv, chabad, status_note):
             chapters = {c: t["en"] for c, t in tanakh[p["book"]].items()}
             highlight.setdefault(p["book"], set()).update(verse_list(p["ref"], chapters))
 
-    prev_link = (f'<a rel="prev" href="../{claim_number(claims[i - 1]["id"])}/">&larr; '
-                 f'{esc(claims[i - 1]["id"])}</a>') if i > 0 else "<span></span>"
-    next_link = (f'<a rel="next" href="../{claim_number(claims[i + 1]["id"])}/">'
-                 f'{esc(claims[i + 1]["id"])} &rarr;</a>') if i + 1 < len(claims) else "<span></span>"
+    groups = []
+    for role in ROLE_ORDER:
+        these = [p for p in passages if p["role"] == role]
+        if not these:
+            continue
+        hint = ('<p class="hint">Highlighted verses are the ones the claim cites.</p>'
+                if role == "context" and highlight else "")
+        cards = "".join(passage_html(p, tanakh, chabad,
+                                     set() if role == "cited" else highlight.get(p["book"], set()))
+                        for p in these)
+        groups.append(f'<h3 class="group-h {role}">{esc(ROLE_GROUP[role])}</h3>{hint}{cards}')
+
+    chips = "".join(f'<li><a class="chip" href="#cite-{k}">{esc(c)}</a></li>'
+                    for k, c in enumerate(claim["cited"], 1))
+    books = " · ".join(f'<a href="../books/{slug(b)}/">{esc(b)}</a>' for b in claim_books(claim))
+
+    def nav_link(j, rel, label):
+        if not 0 <= j < len(claims):
+            return "<span></span>"
+        return f'<a class="btn" rel="{rel}" href="../{claim_number(claims[j]["id"])}/">{label}</a>'
+
+    prev_link = nav_link(i - 1, "prev", f'&larr; {esc(claims[i - 1]["id"])}' if i > 0 else "")
+    next_link = nav_link(i + 1, "next", f'{esc(claims[i + 1]["id"])} &rarr;' if i + 1 < len(claims) else "")
 
     body = f"""<article class="claim">
+<header class="card claim-head">
 <p class="claim-id">{esc(claim['id'])}</p>
 <h1>{esc(claim['claim'])}</h1>
+<ul class="chips" aria-label="Verses the claim cites">{chips}</ul>
+<p class="books-line">More claims from: {books}</p>
+</header>
 <p class="draft">{esc(claim.get('status_note') or status_note)}</p>
 {response_html(claim.get('response', ''))}
 <section class="cited-by-claim">
 <h2>What the claim cites</h2>
-{''.join(citation_html(c, kjv) for c in claim['cited'])}
+{''.join(citation_html(k, c, kjv) for k, c in enumerate(claim['cited'], 1))}
 </section>
 <section class="tanakh">
 <h2>The TaNaKh passages</h2>
-<p class="hint">Highlighted verses are the ones the claim cites.</p>
-{''.join(passage_html(p, tanakh, chabad, set() if p['role'] == 'cited' else highlight.get(p['book'], set())) for p in passages)}
+{''.join(groups)}
 </section>
-<nav class="prevnext">{prev_link}<a href="../">All claims</a>{next_link}</nav>
+<nav class="prevnext">{prev_link}<a class="btn" href="../">All claims</a>{next_link}</nav>
 </article>"""
     return page(f"{claim['id']}: {claim['claim']} · Emet", body, depth=1,
                 description=claim["claim"])
@@ -261,29 +363,103 @@ def index_page(doc):
     grid = "\n".join(
         f'<a href="{claim_number(c["id"])}/" title="{esc(c["claim"])}">{claim_number(c["id"])}</a>'
         for c in claims)
-    items = "\n".join(
-        f'<li><a href="{claim_number(c["id"])}/"><span class="id">{esc(c["id"])}</span> '
-        f'{esc(c["claim"])}</a></li>' for c in claims)
+    cards = "\n".join(claim_card(c, "", searchable=True) for c in claims)
     body = f"""<section class="hero">
-<h1>Emet</h1>
+<h1>Emet <span lang="he">אמת</span></h1>
 <p class="sub">{esc(doc['subtitle'])}</p>
-<p class="howto">Following a debate? When a claim number is called out, tap it below,
-or add the number to this site's address, for example <code>/42</code>.</p>
+<form class="big-search" id="search" role="search" action="./" method="get">
+  <label for="q">Find a claim by number, keyword or verse</label>
+  <div class="search-row">
+    <input id="q" type="search" name="q" placeholder="e.g. 42, virgin, Isaiah 53" autocomplete="off" spellcheck="false">
+    <button type="submit">Search</button>
+  </div>
+</form>
+<p id="search-status" class="search-status" role="status" aria-live="polite"></p>
+<p class="quick">Or browse <a href="books/">by book</a> or <a href="verses/">by TaNaKh passage</a>.</p>
 </section>
+<section id="numbers" class="card numbers">
+<h2>Jump to a claim number</h2>
 <nav class="grid" aria-label="Claims by number">
 {grid}
 </nav>
+</section>
 <section>
-<h2>All {len(claims)} claims</h2>
-<ol class="claim-list">
-{items}
+<h2 id="list-heading">All {len(claims)} claims</h2>
+<ol id="claims" class="claim-cards">
+{cards}
 </ol>
 </section>"""
     return page("Emet: evangelical claims and the TaNaKh passages listed in answer",
-                body, depth=0, description=doc["subtitle"])
+                body, depth=0, description=doc["subtitle"], header_search=False, script=True)
 
 
-def verses_page(doc, chabad_books):
+def book_index(claims):
+    """{book: {"cite": [claim, ...], "answer": [(claim, [refs])...]}} in claim order."""
+    index = {}
+    for c in claims:
+        for b in {cite_book(x) for x in c["cited"]}:
+            index.setdefault(b, {"cite": [], "answer": []})["cite"].append(c)
+        refs = {}
+        for p in sorted(c["passages"], key=lambda p: ROLE_ORDER[p["role"]]):
+            refs.setdefault(p["book"], [])
+            if p["ref"] not in refs[p["book"]]:
+                refs[p["book"]].append(p["ref"])
+        for b, rs in refs.items():
+            index.setdefault(b, {"cite": [], "answer": []})["answer"].append((c, rs))
+    return index
+
+
+def books_page(index):
+    sections = []
+    for group, books in BOOK_GROUPS:
+        tiles = []
+        for b in books:
+            if b not in index:
+                continue
+            n = len({c["id"] for c in index[b]["cite"]} | {c["id"] for c, _ in index[b]["answer"]})
+            tiles.append(f'<li><a class="card" href="{slug(b)}/"><span class="name">{esc(b)}</span>'
+                         f'<span class="n">{n} claim{"s" if n != 1 else ""}</span></a></li>')
+        if tiles:
+            sections.append(f'<section><h2>{esc(group)}</h2><ul class="book-tiles">{"".join(tiles)}</ul></section>')
+    body = f"""<h1>Browse by book</h1>
+<p class="lede">Pick a book to see every claim that cites it, and every claim answered
+from it.</p>
+{''.join(sections)}"""
+    return page("Books · Emet", body, depth=1,
+                description="Find claims by the book of the Bible they cite or are answered from.")
+
+
+def book_page(book, entry, is_tanakh):
+    up = "../../"
+    cite, answer = entry["cite"], entry["answer"]
+    parts = []
+    jumps = []
+    if cite:
+        jumps.append(f'<a class="chip" href="#cite">Claims that cite {esc(book)} ({len(cite)})</a>')
+        parts.append(f"""<section id="cite">
+<h2>Claims that cite {esc(book)}</h2>
+<p class="hint">These claims quote {esc(book)} as support.</p>
+<ol class="claim-cards">{''.join(claim_card(c, up) for c in cite)}</ol>
+</section>""")
+    if answer:
+        jumps.append(f'<a class="chip" href="#answer">Answered from {esc(book)} ({len(answer)})</a>')
+        cards = "".join(claim_card(c, up, refs=f"{book} " + " · ".join(rs)) for c, rs in answer)
+        parts.append(f"""<section id="answer">
+<h2>Claims answered from {esc(book)}</h2>
+<p class="hint">Passages from {esc(book)} are listed in answer to these claims.</p>
+<ol class="claim-cards">{cards}</ol>
+</section>""")
+    if is_tanakh and answer:
+        jumps.append(f'<a class="chip" href="{up}verses/#{slug(book)}">{esc(book)} passages index</a>')
+    body = f"""<p class="crumbs"><a href="../">All books</a></p>
+<h1>{esc(book)}</h1>
+<p class="chips jumps">{''.join(jumps)}</p>
+{''.join(parts)}"""
+    return page(f"{book} · Emet", body, depth=2,
+                description=f"Claims that cite {book} or are answered from it.")
+
+
+def verses_page(doc):
     by_book = {}
     for c in doc["claims"]:
         for p in c["passages"]:
@@ -293,25 +469,24 @@ def verses_page(doc, chabad_books):
         m = REF_RE.match(ref)
         return (int(m["c1"]), int(m["v1"]), int(m["c2"] or m["c1"]), int(m["v2"] or m["v1"]))
 
+    books = [b for b in BOOK_ORDER if b in by_book]
     sections = []
-    for book in chabad_books:
-        if book not in by_book:
-            continue
+    for book in books:
         rows = []
         for ref in sorted(by_book[book], key=key):
             ids = sorted(set(by_book[book][ref]))
-            links = ", ".join(f'<a href="../{claim_number(i)}/">{esc(i)}</a>' for i in ids)
+            links = " ".join(f'<a class="chip" href="../{claim_number(i)}/">{esc(i)}</a>' for i in ids)
             rows.append(f"<tr><th>{esc(ref)}</th><td>{links}</td></tr>")
-        slug = book.lower().replace(" ", "-")
-        sections.append(f'<section id="{esc(slug)}"><h2>{esc(book)}</h2>'
+        sections.append(f'<section id="{esc(slug(book))}" class="card verse-book">'
+                        f'<h2>{esc(book)} <a class="more" href="../books/{slug(book)}/">all {esc(book)} claims</a></h2>'
                         f'<table class="verse-index">{"".join(rows)}</table></section>')
-    toc = " · ".join(f'<a href="#{esc(b.lower().replace(" ", "-"))}">{esc(b)}</a>'
-                     for b in chabad_books if b in by_book)
+    toc = "".join(f'<a class="chip" href="#{esc(slug(b))}">{esc(b)}</a>' for b in books)
     body = f"""<h1>TaNaKh passages</h1>
-<p>Every passage on this site, in Chabad.org book order and numbering, with the claims it is listed under.</p>
-<p class="toc">{toc}</p>
+<p class="lede">Every passage on this site, in Chabad.org book order and numbering, with the
+claims it is listed under.</p>
+<p class="chips toc">{toc}</p>
 {''.join(sections)}"""
-    return page("By verse · Emet", body, depth=1,
+    return page("Passages · Emet", body, depth=1,
                 description="Every TaNaKh passage on the site, with the claims it answers.")
 
 
@@ -328,6 +503,13 @@ links to its chapter on Chabad.org, with Rashi, and to Sefaria.</li>
 {counts['verified']} of {counts['passages']} have been verified against that source.
 A verified passage is marked &#10003;.</li>
 </ul>
+<h2>Finding a claim</h2>
+<ul>
+<li>Type a claim's number after the site's address, for example <code>/42</code>.</li>
+<li>Use the search box: a number takes you straight to that claim; words or a verse
+(for example <em>virgin</em> or <em>Isaiah 53</em>) list every claim that mentions them.</li>
+<li>Or browse <a href="../books/">by book</a> or <a href="../verses/">by TaNaKh passage</a>.</li>
+</ul>
 <h2>Status</h2>
 <p class="draft">{esc(doc['status_note'])}</p>
 <h2>Texts quoted</h2>
@@ -341,9 +523,10 @@ A verified passage is marked &#10003;.</li>
 verse numbering. For a modern translation and Rashi's commentary, follow the Chabad.org link
 beside each passage.</p>
 <h2>Privacy and safety</h2>
-<p>This site is plain HTML and one stylesheet. It runs no scripts, sets no cookies, has no
-forms, collects nothing, and loads nothing from any other website. Each page carries a
-Content Security Policy that tells the browser to enforce this.</p>"""
+<p>This site is plain HTML, one stylesheet, and one short script that filters the list of
+claims as you type in the search box. It sets no cookies, collects nothing, sends nothing,
+and loads nothing from any other website. Each page carries a Content Security Policy that
+tells the browser to enforce this.</p>"""
     return page("About · Emet", body, depth=1, description="About the Emet site and its sources.")
 
 
@@ -396,6 +579,9 @@ def validate(doc, tanakh, kjv, chabad):
         seen.add(c["id"])
         for cite in c["cited"]:
             m = CITE_RE.match(cite)
+            if not m or cite_book(cite) not in BOOK_ORDER:
+                errors.append(f"{c['id']}: cannot read citation {cite!r}")
+                continue
             try:
                 verse_list(m["ref"], kjv[m["book"]])
             except Exception as e:  # noqa: BLE001 - report every problem at once
@@ -403,6 +589,8 @@ def validate(doc, tanakh, kjv, chabad):
         for p in c["passages"]:
             if p["role"] not in ROLE_ORDER:
                 errors.append(f"{c['id']}: unknown role {p['role']!r}")
+            if p["book"] not in BOOK_ORDER:
+                errors.append(f"{c['id']}: unknown book {p['book']!r}")
             if p["book"] != "Genesis" and p["book"] not in chabad["first_chapter_id"]:
                 errors.append(f"{c['id']}: no Chabad.org chapter ID for book {p['book']!r}")
             try:
@@ -413,14 +601,28 @@ def validate(doc, tanakh, kjv, chabad):
         sys.exit("Data problems:\n  " + "\n  ".join(errors))
 
 
-FORBIDDEN = [
-    (re.compile(r"<\s*script", re.I), "a <script> tag"),
-    (re.compile(r"<\s*(iframe|object|embed|form|input|base)\b", re.I), "an iframe/object/embed/form/input/base tag"),
+# Things no HTML page may contain.
+FORBIDDEN_HTML = [
+    (re.compile(r"<\s*(iframe|object|embed|base|frame|applet)\b", re.I), "an iframe/object/embed/base tag"),
     (re.compile(r"\son[a-z]+\s*=", re.I), "an inline event handler (onclick= etc.)"),
     (re.compile(r"javascript:", re.I), "a javascript: link"),
-    (re.compile(r"<(link|img|source|video|audio)\b[^>]*\b(href|src)=\"(https?:)?//", re.I),
+    (re.compile(r"<(link|img|source|video|audio|script)\b[^>]*\b(href|src)=\"(https?:)?//", re.I),
      "a resource loaded from another website"),
+    (re.compile(r"<\s*form\b(?![^>]*\baction=\"(\.\./)*(\./)?\")", re.I),
+     "a form that submits anywhere but this site's front page"),
+    (re.compile(r"<\s*input\b(?![^>]*\btype=\"search\")", re.I), "an input other than a search box"),
     (re.compile(r"@import|url\(\s*['\"]?(https?:)?//", re.I), "a stylesheet loading from another website"),
+]
+
+# The only script tag allowed, and only on the front page.
+ALLOWED_SCRIPT_TAG = '<script src="search.js" defer></script>'
+
+# Things the script may not do. It needs none of them to filter a list.
+FORBIDDEN_JS = [
+    "innerHTML", "outerHTML", "insertAdjacentHTML", "document.write", "eval(", "Function(",
+    "setTimeout(", "setInterval(", "fetch(", "XMLHttpRequest", "WebSocket", "EventSource",
+    "sendBeacon", "import(", "importScripts", "Worker(", "cookie", "localStorage",
+    "sessionStorage", "indexedDB", "postMessage", "window.open", "http:", "https:",
 ]
 
 
@@ -429,15 +631,31 @@ def check_output():
     for path in sorted(OUT.rglob("*")):
         if path.is_dir():
             continue
-        if path.suffix not in {".html", ".css"} and path.name != ".nojekyll":
-            problems.append(f"{path.relative_to(ROOT)}: unexpected file type")
-            continue
+        rel = path.relative_to(OUT).as_posix()
         text = path.read_text("utf-8")
-        if path.suffix == ".html" and CSP not in text:
-            problems.append(f"{path.relative_to(ROOT)}: missing Content-Security-Policy")
-        for pattern, what in FORBIDDEN:
+        if path.suffix == ".js":
+            if rel != "search.js" or text != (ROOT / "site" / "search.js").read_text("utf-8"):
+                problems.append(f"docs/{rel}: unexpected script file")
+            # Check the code itself, not the comments that explain it.
+            code = re.sub(r"/\*.*?\*/", "", text, flags=re.S)
+            code = re.sub(r"^\s*//.*$", "", code, flags=re.M)
+            for word in FORBIDDEN_JS:
+                if word in code:
+                    problems.append(f"docs/{rel}: script uses {word!r}")
+            continue
+        if path.suffix not in {".html", ".css"} and path.name != ".nojekyll":
+            problems.append(f"docs/{rel}: unexpected file type")
+            continue
+        if path.suffix == ".html":
+            if CSP not in text:
+                problems.append(f"docs/{rel}: missing Content-Security-Policy")
+            scripts = re.findall(r"<\s*script\b[^>]*>(?:.*?</\s*script\s*>)?", text, re.I | re.S)
+            allowed = [ALLOWED_SCRIPT_TAG] if rel == "index.html" else []
+            if scripts != allowed:
+                problems.append(f"docs/{rel}: has script tags {scripts!r}, allowed only {allowed!r}")
+        for pattern, what in FORBIDDEN_HTML:
             if pattern.search(text):
-                problems.append(f"{path.relative_to(ROOT)}: contains {what}")
+                problems.append(f"docs/{rel}: contains {what}")
     if problems:
         sys.exit("Safety check failed:\n  " + "\n  ".join(problems))
 
@@ -462,6 +680,7 @@ def main():
     OUT.mkdir()
     (OUT / ".nojekyll").write_text("")  # serve files as-is, no Jekyll processing
     shutil.copy(ROOT / "site" / "style.css", OUT / "style.css")
+    shutil.copy(ROOT / "site" / "search.js", OUT / "search.js")
 
     claims = doc["claims"]
     for i, claim in enumerate(claims):
@@ -471,10 +690,13 @@ def main():
         for alias in {f"{n:03d}", claim["id"], claim["id"].lower()} - {str(n)}:
             write(f"{alias}/index.html", alias_page(n))
 
-    book_order = ["Genesis"] + list(chabad["first_chapter_id"].keys())
-    # Chabad.org order: Torah, Prophets, then Writings.
     write("index.html", index_page(doc))
-    write("verses/index.html", verses_page(doc, book_order))
+    index = book_index(claims)
+    write("books/index.html", books_page(index))
+    tanakh_books = {b for _, books in BOOK_GROUPS[:3] for b in books}
+    for book, entry in index.items():
+        write(f"books/{slug(book)}/index.html", book_page(book, entry, book in tanakh_books))
+    write("verses/index.html", verses_page(doc))
     passages = [p for c in claims for p in c["passages"]]
     counts = {"passages": len(passages),
               "sourced": sum(1 for p in passages if p.get("source")),
@@ -483,7 +705,8 @@ def main():
     write("404.html", not_found_page())
 
     check_output()
-    print(f"Built {len(claims)} claim pages into {OUT.relative_to(ROOT)}/ - safety check passed.")
+    print(f"Built {len(claims)} claim pages and {len(index)} book pages into "
+          f"{OUT.relative_to(ROOT)}/ - safety check passed.")
 
 
 if __name__ == "__main__":
