@@ -1,0 +1,6327 @@
+{
+  "title": "Emet",
+  "subtitle": "Evangelical claims, the verses they cite, and the TaNaKh passages listed in answer",
+  "status_note": "UNVERIFIED DRAFT (2026-11-13). Listed from general knowledge of the passages usually cited on each side. Not yet checked against Rabbi Singer or any other rabbinic source, and not attributed to anyone.",
+  "claims": [
+    {
+      "id": "C-001",
+      "claim": "Isaiah 7:14 foretells that the Messiah would be born of a virgin, fulfilled in the birth of Jesus.",
+      "cited": [
+        "Matthew 1:22-23",
+        "Isaiah 7:14"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "7:10-16",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "7:14",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "8:3-4",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "8:18",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-002",
+      "claim": "Micah 5:2 foretells that the Messiah would be born in Bethlehem, fulfilled in the birth of Jesus there.",
+      "cited": [
+        "Matthew 2:5-6",
+        "Micah 5:2"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Micah",
+          "ref": "5:1",
+          "role": "cited",
+          "kjv": "5:2",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Micah",
+          "ref": "5:1-5",
+          "role": "context",
+          "kjv": "5:2-6",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-003",
+      "claim": "Hosea 11:1, 'out of Egypt have I called my son', is a prophecy fulfilled when Jesus returned from Egypt.",
+      "cited": [
+        "Matthew 2:15",
+        "Hosea 11:1"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Exodus",
+          "ref": "4:22-23",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Hosea",
+          "ref": "11:1",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Hosea",
+          "ref": "11:1-2",
+          "role": "context",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-004",
+      "claim": "Jeremiah 31:15, Rachel weeping for her children, was fulfilled in Herod's killing of the children of Bethlehem.",
+      "cited": [
+        "Matthew 2:17-18",
+        "Jeremiah 31:15"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Jeremiah",
+          "ref": "31:14",
+          "role": "cited",
+          "kjv": "31:15",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Jeremiah",
+          "ref": "31:14-16",
+          "role": "context",
+          "kjv": "31:15-17",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-005",
+      "claim": "The prophets foretold that the Messiah would be called a Nazarene.",
+      "cited": [
+        "Matthew 2:23"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Judges",
+          "ref": "13:5",
+          "role": "cited",
+          "note": "No verse in the TaNaKh has the words Matthew quotes. This is one of the verses usually proposed as its source.",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "11:1",
+          "role": "cited",
+          "note": "No verse in the TaNaKh has the words Matthew quotes. This is one of the verses usually proposed as its source.",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-006",
+      "claim": "Isaiah 53 describes the Messiah suffering and dying for the sins of others, fulfilled in Jesus.",
+      "cited": [
+        "Acts 8:32-35",
+        "1 Peter 2:24",
+        "Isaiah 52:13-53:12"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "41:8-9",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "44:1-2",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "44:21",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "45:4",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "48:20",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "49:3",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "52:13-53:12",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-007",
+      "claim": "Psalm 22:16, 'they pierced my hands and my feet', foretells the crucifixion.",
+      "cited": [
+        "Psalms 22:16"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "38:13",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "22:13-22",
+          "role": "context",
+          "kjv": "22:12-21",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "22:17",
+          "role": "cited",
+          "kjv": "22:16",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-008",
+      "claim": "Psalm 22 foretells Jesus's words on the cross and the dividing of his garments.",
+      "cited": [
+        "Matthew 27:46",
+        "John 19:24",
+        "Psalms 22:1",
+        "Psalms 22:18"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Psalms",
+          "ref": "22:1",
+          "role": "context",
+          "kjv": "the title, which the KJV does not number",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "22:2",
+          "role": "cited",
+          "kjv": "22:1",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "22:19",
+          "role": "cited",
+          "kjv": "22:18",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-009",
+      "claim": "Zechariah 12:10, 'they shall look upon me whom they have pierced', foretells the piercing of Jesus.",
+      "cited": [
+        "John 19:37",
+        "Zechariah 12:10"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Zechariah",
+          "ref": "12:8-14",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Zechariah",
+          "ref": "12:10",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-010",
+      "claim": "Jeremiah 31:31-34 foretells a new covenant, established by Jesus, that replaces the covenant made at Sinai.",
+      "cited": [
+        "Hebrews 8:8-13",
+        "Jeremiah 31:31-34"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Leviticus",
+          "ref": "26:44-45",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Deuteronomy",
+          "ref": "29:13-14",
+          "role": "reply",
+          "kjv": "29:14-15",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Jeremiah",
+          "ref": "31:30-33",
+          "role": "cited",
+          "kjv": "31:31-34",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Jeremiah",
+          "ref": "31:34-36",
+          "role": "context",
+          "kjv": "31:35-37",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-011",
+      "claim": "Isaiah 9:6 calls the Messiah 'The mighty God', showing that he is divine.",
+      "cited": [
+        "Isaiah 9:6-7"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "9:5-6",
+          "role": "cited",
+          "kjv": "9:6-7",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-012",
+      "claim": "Daniel 9:24-27 foretells when the Messiah would come and that he would be killed before the Second Temple was destroyed.",
+      "cited": [
+        "Daniel 9:24-27"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Leviticus",
+          "ref": "4:3",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "45:1",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Jeremiah",
+          "ref": "29:10",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Daniel",
+          "ref": "9:1-3",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Daniel",
+          "ref": "9:24-27",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-013",
+      "claim": "Psalm 110:1, 'The LORD said unto my Lord', shows that the Messiah is David's divine Lord.",
+      "cited": [
+        "Matthew 22:41-45",
+        "Psalms 110:1"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Genesis",
+          "ref": "23:6",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Samuel I",
+          "ref": "26:18",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "110:1",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-014",
+      "claim": "Psalm 2:7, 'Thou art my Son; this day have I begotten thee', speaks of Jesus as the Son of God.",
+      "cited": [
+        "Acts 13:33",
+        "Hebrews 1:5",
+        "Psalms 2:7"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Exodus",
+          "ref": "4:22",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Samuel II",
+          "ref": "7:14",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "2:7",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "89:27-28",
+          "role": "reply",
+          "kjv": "89:26-27",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-015",
+      "claim": "Psalm 2:12, 'Kiss the Son', commands homage to the Son of God.",
+      "cited": [
+        "Psalms 2:12"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Psalms",
+          "ref": "2:12",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Proverbs",
+          "ref": "31:2",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-016",
+      "claim": "Genesis 3:15, the seed of the woman, is the first prophecy of the Messiah.",
+      "cited": [
+        "Genesis 3:15",
+        "Galatians 4:4"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Genesis",
+          "ref": "3:14-15",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Genesis",
+          "ref": "3:15",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-017",
+      "claim": "The promise to Abraham's 'seed' is in the singular and so means one person, Christ.",
+      "cited": [
+        "Galatians 3:16",
+        "Genesis 22:18"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Genesis",
+          "ref": "13:15-16",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Genesis",
+          "ref": "15:5",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Genesis",
+          "ref": "15:13",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Genesis",
+          "ref": "22:17-18",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-018",
+      "claim": "Genesis 49:10 foretells that the Messiah (Shiloh) would come before the sceptre departed from Judah.",
+      "cited": [
+        "Genesis 49:10"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Genesis",
+          "ref": "49:8-12",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Genesis",
+          "ref": "49:10",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-019",
+      "claim": "Deuteronomy 18:15-19 foretells Jesus as the prophet like Moses.",
+      "cited": [
+        "Acts 3:22-23",
+        "Deuteronomy 18:15-19"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Deuteronomy",
+          "ref": "13:2-6",
+          "role": "reply",
+          "kjv": "13:1-5",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Deuteronomy",
+          "ref": "18:15-19",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Deuteronomy",
+          "ref": "18:20-22",
+          "role": "context",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-020",
+      "claim": "Without the shedding of blood there is no forgiveness of sin.",
+      "cited": [
+        "Hebrews 9:22",
+        "Leviticus 17:11"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Leviticus",
+          "ref": "5:11-13",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Leviticus",
+          "ref": "17:10-14",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Leviticus",
+          "ref": "17:11",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Kings I",
+          "ref": "8:46-50",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Ezekiel",
+          "ref": "18:21-23",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Hosea",
+          "ref": "6:6",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Hosea",
+          "ref": "14:2-3",
+          "role": "reply",
+          "kjv": "14:1-2",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Jonah",
+          "ref": "3:10",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Micah",
+          "ref": "6:6-8",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "51:18-19",
+          "role": "reply",
+          "kjv": "51:16-17",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Proverbs",
+          "ref": "16:6",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-021",
+      "claim": "No one is righteous; all have sinned and cannot be righteous before God.",
+      "cited": [
+        "Romans 3:10-12",
+        "Romans 3:23",
+        "Psalms 14:1-3"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Genesis",
+          "ref": "4:7",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Genesis",
+          "ref": "6:9",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Deuteronomy",
+          "ref": "30:11-14",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "14:1-3",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "14:4-5",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Job",
+          "ref": "1:1",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-022",
+      "claim": "All people inherit sin and guilt from Adam.",
+      "cited": [
+        "Romans 5:12",
+        "Romans 5:18-19"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Deuteronomy",
+          "ref": "24:16",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Kings II",
+          "ref": "14:6",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Jeremiah",
+          "ref": "31:28-29",
+          "role": "reply",
+          "kjv": "31:29-30",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Ezekiel",
+          "ref": "18:20",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-023",
+      "claim": "One righteous person can die to atone for the sins of others.",
+      "cited": [
+        "1 Peter 3:18",
+        "2 Corinthians 5:21"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Exodus",
+          "ref": "32:30-33",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Deuteronomy",
+          "ref": "24:16",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Ezekiel",
+          "ref": "18:1-4",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "49:8-9",
+          "role": "reply",
+          "kjv": "49:7-8",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-024",
+      "claim": "God accepted the death of a man as a sacrifice for sin.",
+      "cited": [
+        "Hebrews 10:10-12",
+        "Ephesians 5:2"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Leviticus",
+          "ref": "18:21",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Deuteronomy",
+          "ref": "12:30-31",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Jeremiah",
+          "ref": "19:5",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "106:37-38",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-025",
+      "claim": "God became a man in Jesus.",
+      "cited": [
+        "John 1:1",
+        "John 1:14",
+        "Colossians 2:9"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Numbers",
+          "ref": "23:19",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Deuteronomy",
+          "ref": "4:15-16",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Samuel I",
+          "ref": "15:29",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Hosea",
+          "ref": "11:9",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-026",
+      "claim": "Genesis 1:26, 'Let us make man in our image', shows a plurality of persons in God.",
+      "cited": [
+        "Genesis 1:26"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Genesis",
+          "ref": "1:26",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Genesis",
+          "ref": "1:27",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "44:24",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-027",
+      "claim": "Deuteronomy 6:4 uses 'one' in the sense of a compound unity, which allows for the Trinity.",
+      "cited": [
+        "Deuteronomy 6:4",
+        "Matthew 28:19"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Deuteronomy",
+          "ref": "4:35",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Deuteronomy",
+          "ref": "4:39",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Deuteronomy",
+          "ref": "6:4",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Deuteronomy",
+          "ref": "32:39",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "44:6",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "45:5-6",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "46:9",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-028",
+      "claim": "The Law of Moses was ended or set aside by Christ.",
+      "cited": [
+        "Romans 10:4",
+        "Galatians 3:24-25",
+        "Ephesians 2:15",
+        "Hebrews 8:13"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Exodus",
+          "ref": "31:16-17",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Leviticus",
+          "ref": "23:21",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Deuteronomy",
+          "ref": "4:2",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Deuteronomy",
+          "ref": "13:1",
+          "role": "reply",
+          "kjv": "12:32",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Deuteronomy",
+          "ref": "29:28",
+          "role": "reply",
+          "kjv": "29:29",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Malachi",
+          "ref": "3:22",
+          "role": "reply",
+          "kjv": "4:4",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "19:8",
+          "role": "reply",
+          "kjv": "19:7",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "119:152",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "119:160",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-029",
+      "claim": "Anyone who does not keep every part of the Law is under a curse, and no one can keep it.",
+      "cited": [
+        "Galatians 3:10",
+        "Deuteronomy 27:26"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Deuteronomy",
+          "ref": "27:26",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Deuteronomy",
+          "ref": "30:11-14",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-030",
+      "claim": "Habakkuk 2:4 teaches that the just shall live by faith, not by works of the Law.",
+      "cited": [
+        "Romans 1:17",
+        "Galatians 3:11",
+        "Habakkuk 2:4"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Habakkuk",
+          "ref": "2:1-4",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Habakkuk",
+          "ref": "2:4",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-031",
+      "claim": "Abraham was counted righteous by faith alone, apart from works.",
+      "cited": [
+        "Romans 4:3",
+        "Genesis 15:6"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Genesis",
+          "ref": "15:6",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Genesis",
+          "ref": "22:16-18",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Genesis",
+          "ref": "26:4-5",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-032",
+      "claim": "Psalm 40:6-8 foretells the incarnation: 'a body hast thou prepared me'.",
+      "cited": [
+        "Hebrews 10:5-7",
+        "Psalms 40:6-8"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Psalms",
+          "ref": "40:7-9",
+          "role": "cited",
+          "kjv": "40:6-8",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-033",
+      "claim": "The thirty pieces of silver and the potter's field were foretold by the prophet Jeremiah.",
+      "cited": [
+        "Matthew 27:9-10",
+        "Zechariah 11:12-13"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Jeremiah",
+          "ref": "32:6-9",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Zechariah",
+          "ref": "11:4-14",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Zechariah",
+          "ref": "11:12-13",
+          "role": "cited",
+          "note": "They are in Zechariah; Matthew names Jeremiah.",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-034",
+      "claim": "Zechariah 9:9 foretells the Messiah's entry into Jerusalem on a donkey, fulfilled by Jesus.",
+      "cited": [
+        "Matthew 21:4-5",
+        "Zechariah 9:9"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Zechariah",
+          "ref": "9:9",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Zechariah",
+          "ref": "9:9-10",
+          "role": "context",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-035",
+      "claim": "Psalm 41:9 foretells the betrayal of Jesus by Judas.",
+      "cited": [
+        "John 13:18",
+        "Psalms 41:9"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Psalms",
+          "ref": "41:5",
+          "role": "context",
+          "kjv": "41:4",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "41:10",
+          "role": "cited",
+          "kjv": "41:9",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-036",
+      "claim": "Psalm 69:21 foretells that Jesus would be given gall and vinegar.",
+      "cited": [
+        "Matthew 27:34",
+        "John 19:28-29",
+        "Psalms 69:21"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Psalms",
+          "ref": "69:6",
+          "role": "context",
+          "kjv": "69:5",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "69:22",
+          "role": "cited",
+          "kjv": "69:21",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-037",
+      "claim": "Psalm 34:20 foretells that none of Jesus's bones would be broken.",
+      "cited": [
+        "John 19:36",
+        "Psalms 34:20"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Exodus",
+          "ref": "12:46",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Numbers",
+          "ref": "9:12",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "34:20-21",
+          "role": "context",
+          "kjv": "34:19-20",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "34:21",
+          "role": "cited",
+          "kjv": "34:20",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-038",
+      "claim": "Psalm 16:10 foretells the resurrection of the Messiah.",
+      "cited": [
+        "Acts 2:25-31",
+        "Acts 13:35",
+        "Psalms 16:10"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Psalms",
+          "ref": "16:8-11",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "16:10",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-039",
+      "claim": "The Scriptures foretold that the Messiah would rise on the third day.",
+      "cited": [
+        "1 Corinthians 15:3-4",
+        "Matthew 12:40",
+        "Hosea 6:2",
+        "Jonah 1:17"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Hosea",
+          "ref": "6:1-2",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Hosea",
+          "ref": "6:2",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Jonah",
+          "ref": "2:1",
+          "role": "cited",
+          "kjv": "1:17",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-040",
+      "claim": "The Messiah had to come before the Second Temple was destroyed.",
+      "cited": [
+        "Mark 1:2",
+        "Malachi 3:1",
+        "Haggai 2:9"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Haggai",
+          "ref": "2:6-9",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Haggai",
+          "ref": "2:9",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Malachi",
+          "ref": "3:1",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Malachi",
+          "ref": "3:1-4",
+          "role": "context",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-041",
+      "claim": "Isaiah 40:3, the voice crying in the wilderness, foretells John the Baptist.",
+      "cited": [
+        "Matthew 3:3",
+        "Isaiah 40:3"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "40:1-5",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "40:3",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-042",
+      "claim": "John the Baptist was the Elijah foretold by Malachi.",
+      "cited": [
+        "Matthew 11:13-14",
+        "Matthew 17:10-13",
+        "Malachi 4:5-6"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Malachi",
+          "ref": "3:23-24",
+          "role": "cited",
+          "kjv": "4:5-6",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-043",
+      "claim": "Isaiah 9:1-2 foretells the Messiah's ministry in Galilee.",
+      "cited": [
+        "Matthew 4:13-16",
+        "Isaiah 9:1-2"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "8:23-9:1",
+          "role": "cited",
+          "kjv": "9:1-2",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-044",
+      "claim": "Isaiah 61:1-2 was fulfilled in the ministry of Jesus.",
+      "cited": [
+        "Luke 4:17-21",
+        "Isaiah 61:1-2"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "61:1-2",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "61:1-4",
+          "role": "context",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-045",
+      "claim": "Psalm 118:22, the stone which the builders refused, speaks of Jesus.",
+      "cited": [
+        "Matthew 21:42",
+        "Acts 4:11",
+        "Psalms 118:22-23"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Psalms",
+          "ref": "118:10-23",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "118:22-23",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-046",
+      "claim": "The messianic prophecies Jesus did not fulfil will be fulfilled at his second coming.",
+      "cited": [
+        "Hebrews 9:28",
+        "Acts 1:11"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "2:2-4",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "11:1-9",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "11:11-12",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Jeremiah",
+          "ref": "23:5-6",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Ezekiel",
+          "ref": "37:21-28",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Micah",
+          "ref": "4:1-4",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Zechariah",
+          "ref": "14:9",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-047",
+      "claim": "Jesus is the heir to David's throne through the genealogies in Matthew and Luke.",
+      "cited": [
+        "Matthew 1:1-16",
+        "Luke 3:23-31"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Numbers",
+          "ref": "1:18",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Samuel II",
+          "ref": "7:12-16",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Jeremiah",
+          "ref": "22:28-30",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Chronicles I",
+          "ref": "22:9-10",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-048",
+      "claim": "Jeremiah 23:5-6 names the Messiah 'THE LORD OUR RIGHTEOUSNESS', showing that he is God.",
+      "cited": [
+        "Jeremiah 23:5-6"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Jeremiah",
+          "ref": "23:5-6",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Jeremiah",
+          "ref": "33:16",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-049",
+      "claim": "Proverbs 30:4, 'what is his son's name', shows that God has a Son.",
+      "cited": [
+        "Proverbs 30:4"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Exodus",
+          "ref": "4:22",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Proverbs",
+          "ref": "30:4",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-050",
+      "claim": "Psalm 45:6-7, 'Thy throne, O God', addresses the Messiah as God.",
+      "cited": [
+        "Hebrews 1:8-9",
+        "Psalms 45:6-7"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Psalms",
+          "ref": "45:1-3",
+          "role": "context",
+          "kjv": "the title and 45:1-2",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "45:7-8",
+          "role": "cited",
+          "kjv": "45:6-7",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-051",
+      "claim": "Jesus is a priest for ever after the order of Melchizedek, replacing the priesthood of Aaron.",
+      "cited": [
+        "Hebrews 7:11-17",
+        "Psalms 110:4",
+        "Genesis 14:18-20"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Genesis",
+          "ref": "14:18-20",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Exodus",
+          "ref": "40:15",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Numbers",
+          "ref": "25:13",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Jeremiah",
+          "ref": "33:17-18",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "110:4",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-052",
+      "claim": "Zechariah 13:6, the wounds in his hands, speaks of the crucified Jesus.",
+      "cited": [
+        "Zechariah 13:6"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Zechariah",
+          "ref": "13:2-6",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Zechariah",
+          "ref": "13:6",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-053",
+      "claim": "Daniel 7:13-14, the Son of man coming with the clouds of heaven, speaks of Jesus.",
+      "cited": [
+        "Matthew 26:64",
+        "Daniel 7:13-14"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Daniel",
+          "ref": "7:13-14",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Daniel",
+          "ref": "7:18",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Daniel",
+          "ref": "7:27",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-054",
+      "claim": "Psalm 68:18 foretells the ascension of Jesus.",
+      "cited": [
+        "Ephesians 4:8",
+        "Psalms 68:18"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Psalms",
+          "ref": "68:19",
+          "role": "cited",
+          "kjv": "68:18",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-055",
+      "claim": "Isaiah 42:1-4, 'Behold my servant', speaks of Jesus.",
+      "cited": [
+        "Matthew 12:17-21",
+        "Isaiah 42:1-4"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "41:8-9",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "42:1-4",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-056",
+      "claim": "Hosea's words 'not my people' and 'my people' foretell the calling of the Gentiles.",
+      "cited": [
+        "Romans 9:25-26",
+        "Hosea 1:10",
+        "Hosea 2:23"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Hosea",
+          "ref": "2:1",
+          "role": "cited",
+          "kjv": "1:10",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Hosea",
+          "ref": "2:1-2",
+          "role": "context",
+          "kjv": "1:10-11",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Hosea",
+          "ref": "2:25",
+          "role": "cited",
+          "kjv": "2:23",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-057",
+      "claim": "Joel 2:28-32 was fulfilled at Pentecost.",
+      "cited": [
+        "Acts 2:16-21",
+        "Joel 2:28-32"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Joel",
+          "ref": "3:1-5",
+          "role": "cited",
+          "kjv": "2:28-32",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Joel",
+          "ref": "4:1-2",
+          "role": "context",
+          "kjv": "3:1-2",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-058",
+      "claim": "Jesus is the Passover lamb whose death takes away sin.",
+      "cited": [
+        "1 Corinthians 5:7",
+        "John 1:29",
+        "Exodus 12:3-13"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Exodus",
+          "ref": "12:3-13",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Leviticus",
+          "ref": "4:27-28",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Leviticus",
+          "ref": "4:32",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Leviticus",
+          "ref": "16:21-22",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-059",
+      "claim": "Isaiah 53:4, 'Himself took our infirmities', was fulfilled in the healings Jesus performed.",
+      "cited": [
+        "Matthew 8:17",
+        "Isaiah 53:4"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "53:1-6",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "53:4",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-060",
+      "claim": "Psalm 78:2, 'I will open my mouth in a parable', is a prophecy fulfilled in Jesus's teaching in parables.",
+      "cited": [
+        "Matthew 13:35",
+        "Psalms 78:2"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Psalms",
+          "ref": "78:1-8",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "78:2",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-061",
+      "claim": "Isaiah 6:9-10 foretells that Israel would hear Jesus and not understand.",
+      "cited": [
+        "Matthew 13:14-15",
+        "John 12:40",
+        "Acts 28:25-27",
+        "Isaiah 6:9-10"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "6:8-13",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "6:9-10",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-062",
+      "claim": "Isaiah 29:13, 'this people honoureth me with their lips', is a prophecy about those who opposed Jesus.",
+      "cited": [
+        "Matthew 15:7-9",
+        "Mark 7:6-7",
+        "Isaiah 29:13"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "29:9-14",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "29:13",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-063",
+      "claim": "Zechariah 13:7, 'smite the shepherd, and the sheep shall be scattered', foretells the arrest of Jesus and the flight of his disciples.",
+      "cited": [
+        "Matthew 26:31",
+        "Mark 14:27",
+        "Zechariah 13:7"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Zechariah",
+          "ref": "13:7",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Zechariah",
+          "ref": "13:7-9",
+          "role": "context",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-064",
+      "claim": "Psalm 118:26, 'Blessed be he that cometh in the name of the LORD', speaks of Jesus.",
+      "cited": [
+        "Matthew 21:9",
+        "Matthew 23:39",
+        "Psalms 118:26"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Psalms",
+          "ref": "118:19-29",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "118:26",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-065",
+      "claim": "Psalm 8:2, 'Out of the mouth of babes and sucklings', was fulfilled when children praised Jesus in the Temple.",
+      "cited": [
+        "Matthew 21:16",
+        "Psalms 8:2"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Psalms",
+          "ref": "8:2-10",
+          "role": "context",
+          "kjv": "8:1-9",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "8:3",
+          "role": "cited",
+          "kjv": "8:2",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-066",
+      "claim": "Psalm 69:9, 'the zeal of thine house hath eaten me up', foretells Jesus cleansing the Temple.",
+      "cited": [
+        "John 2:17",
+        "Psalms 69:9"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Psalms",
+          "ref": "69:6-13",
+          "role": "context",
+          "kjv": "69:5-12",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "69:10",
+          "role": "cited",
+          "kjv": "69:9",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-067",
+      "claim": "Daniel's 'abomination of desolation' foretells an event still to come when Jesus spoke.",
+      "cited": [
+        "Matthew 24:15",
+        "Mark 13:14",
+        "Daniel 9:27",
+        "Daniel 11:31",
+        "Daniel 12:11"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Daniel",
+          "ref": "8:9-14",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Daniel",
+          "ref": "9:27",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Daniel",
+          "ref": "11:29-35",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Daniel",
+          "ref": "11:31",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Daniel",
+          "ref": "12:11",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-068",
+      "claim": "'They hated me without a cause' in the Psalms is a prophecy of the hatred of Jesus.",
+      "cited": [
+        "John 15:25",
+        "Psalms 69:4",
+        "Psalms 35:19"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Psalms",
+          "ref": "35:11-19",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "35:19",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "69:5",
+          "role": "cited",
+          "kjv": "69:4",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "69:5-6",
+          "role": "context",
+          "kjv": "69:4-5",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-069",
+      "claim": "Psalms 69:25 and 109:8 foretell the fate of Judas and his replacement.",
+      "cited": [
+        "Acts 1:20",
+        "Psalms 69:25",
+        "Psalms 109:8"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Psalms",
+          "ref": "69:23-29",
+          "role": "context",
+          "kjv": "69:22-28",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "69:26",
+          "role": "cited",
+          "kjv": "69:25",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "109:1-20",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "109:8",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-070",
+      "claim": "Psalm 35:11, 'False witnesses did rise up', foretells the false witnesses at the trial of Jesus.",
+      "cited": [
+        "Matthew 26:59-60",
+        "Psalms 35:11"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Psalms",
+          "ref": "35:11",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "35:11-16",
+          "role": "context",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-071",
+      "claim": "Isaiah 54:13, 'all thy children shall be taught of the LORD', is fulfilled in those who come to Jesus.",
+      "cited": [
+        "John 6:45",
+        "Isaiah 54:13"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "54:11-17",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "54:13",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-072",
+      "claim": "Psalm 82:6, 'I have said, Ye are gods', supports Jesus calling himself the Son of God.",
+      "cited": [
+        "John 10:34-36",
+        "Psalms 82:6"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Psalms",
+          "ref": "82:1-8",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "82:6",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-073",
+      "claim": "Isaiah 53:1, 'Who hath believed our report?', foretells Israel's unbelief in Jesus.",
+      "cited": [
+        "John 12:38",
+        "Romans 10:16",
+        "Isaiah 53:1"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "52:13-53:3",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "53:1",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-074",
+      "claim": "The brass serpent Moses lifted up foreshadows Jesus lifted up on the cross.",
+      "cited": [
+        "John 3:14-15",
+        "Numbers 21:8-9"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Numbers",
+          "ref": "21:4-9",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Numbers",
+          "ref": "21:8-9",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Kings II",
+          "ref": "18:4",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-075",
+      "claim": "Isaiah 53:3 and 49:7 foretell that the Messiah would be despised and rejected by his own people.",
+      "cited": [
+        "John 1:11",
+        "Isaiah 53:3",
+        "Isaiah 49:7"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "49:1-7",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "49:7",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "52:13-53:3",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "53:3",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-076",
+      "claim": "Isaiah 53:5, 'he was wounded for our transgressions', foretells Jesus bearing the punishment for sins.",
+      "cited": [
+        "1 Peter 2:24",
+        "Isaiah 53:5"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "53:4-6",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "53:5",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-077",
+      "claim": "Isaiah 53:7, 'as a lamb to the slaughter', foretells the silence of Jesus before his accusers.",
+      "cited": [
+        "Acts 8:32-35",
+        "Matthew 27:12-14",
+        "Isaiah 53:7"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "53:7",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "53:7-9",
+          "role": "context",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-078",
+      "claim": "Isaiah 53:8, 'he was cut off out of the land of the living', foretells the death of the Messiah.",
+      "cited": [
+        "Acts 8:33",
+        "Isaiah 53:8"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "53:7-9",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "53:8",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-079",
+      "claim": "Isaiah 53:9, 'with the rich in his death', foretells the burial of Jesus in a rich man's tomb.",
+      "cited": [
+        "Matthew 27:57-60",
+        "Isaiah 53:9"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "53:7-9",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "53:9",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-080",
+      "claim": "Isaiah 53:10 foretells that the Messiah would be an offering for sin and then live again.",
+      "cited": [
+        "Isaiah 53:10"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "53:10",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "53:10-12",
+          "role": "context",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-081",
+      "claim": "Isaiah 53:11, 'shall my righteous servant justify many', teaches justification through the Messiah.",
+      "cited": [
+        "Romans 5:18-19",
+        "Isaiah 53:11"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "53:10-12",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "53:11",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-082",
+      "claim": "Isaiah 53:12, 'he was numbered with the transgressors', was fulfilled when Jesus was crucified between two thieves.",
+      "cited": [
+        "Mark 15:28",
+        "Luke 22:37",
+        "Isaiah 53:12"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "53:10-12",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "53:12",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-083",
+      "claim": "Isaiah 52:14, 'his visage was so marred', foretells the scourging and disfigurement of Jesus.",
+      "cited": [
+        "Isaiah 52:14"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "52:13-15",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "52:14",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-084",
+      "claim": "Isaiah 50:6, 'I gave my back to the smiters', foretells the scourging and spitting Jesus suffered.",
+      "cited": [
+        "Matthew 26:67",
+        "Matthew 27:26",
+        "Isaiah 50:6"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "50:4-10",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "50:6",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-085",
+      "claim": "Psalm 22:7-8 foretells the mocking of Jesus on the cross.",
+      "cited": [
+        "Matthew 27:39-43",
+        "Psalms 22:7-8"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Psalms",
+          "ref": "22:2-12",
+          "role": "context",
+          "kjv": "22:1-11",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "22:8-9",
+          "role": "cited",
+          "kjv": "22:7-8",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-086",
+      "claim": "Psalm 22:22, 'I will declare thy name unto my brethren', is spoken by Jesus.",
+      "cited": [
+        "Hebrews 2:12",
+        "Psalms 22:22"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Psalms",
+          "ref": "22:23",
+          "role": "cited",
+          "kjv": "22:22",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "22:23-32",
+          "role": "context",
+          "kjv": "22:22-31",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-087",
+      "claim": "Psalm 31:5, 'Into thine hand I commit my spirit', foretells the last words of Jesus.",
+      "cited": [
+        "Luke 23:46",
+        "Psalms 31:5"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Psalms",
+          "ref": "31:2-9",
+          "role": "context",
+          "kjv": "31:1-8",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "31:6",
+          "role": "cited",
+          "kjv": "31:5",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-088",
+      "claim": "Amos 8:9, the sun going down at noon, foretells the darkness at the crucifixion.",
+      "cited": [
+        "Matthew 27:45",
+        "Amos 8:9"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Amos",
+          "ref": "8:4-10",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Amos",
+          "ref": "8:9",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-089",
+      "claim": "Isaiah 35:5-6 foretells the healing miracles of Jesus.",
+      "cited": [
+        "Matthew 11:4-5",
+        "Isaiah 35:5-6"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "35:1-10",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "35:5-6",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-090",
+      "claim": "Isaiah 11:1-10, the rod out of the stem of Jesse, is fulfilled in Jesus, in whom the Gentiles trust.",
+      "cited": [
+        "Romans 15:12",
+        "Matthew 3:16",
+        "Isaiah 11:1",
+        "Isaiah 11:10"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "11:1",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "11:1-16",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "11:10",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-091",
+      "claim": "Numbers 24:17, 'there shall come a Star out of Jacob', foretells Jesus and the star of Bethlehem.",
+      "cited": [
+        "Matthew 2:2",
+        "Numbers 24:17"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Numbers",
+          "ref": "24:14-19",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Numbers",
+          "ref": "24:17",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-092",
+      "claim": "God's promise to David in 2 Samuel 7:12-16, 'I will be his father, and he shall be my son', is spoken of Jesus.",
+      "cited": [
+        "Luke 1:32-33",
+        "Hebrews 1:5",
+        "2 Samuel 7:12-16"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Samuel II",
+          "ref": "7:8-17",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Samuel II",
+          "ref": "7:12-16",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Kings I",
+          "ref": "8:20",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Chronicles I",
+          "ref": "22:9-10",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Chronicles I",
+          "ref": "28:5-7",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-093",
+      "claim": "Isaiah 9:7, the throne of David established for ever, is fulfilled in Jesus.",
+      "cited": [
+        "Luke 1:32-33",
+        "Isaiah 9:7"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "9:5-6",
+          "role": "context",
+          "kjv": "9:6-7",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "9:6",
+          "role": "cited",
+          "kjv": "9:7",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-094",
+      "claim": "The promise that all nations would be blessed in Abraham's seed is the gospel preached beforehand.",
+      "cited": [
+        "Galatians 3:8",
+        "Acts 3:25",
+        "Genesis 12:3",
+        "Genesis 22:18"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Genesis",
+          "ref": "12:1-3",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Genesis",
+          "ref": "12:3",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Genesis",
+          "ref": "22:15-18",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Genesis",
+          "ref": "22:18",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Genesis",
+          "ref": "28:14",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-095",
+      "claim": "Psalm 72:10-11 and Isaiah 60:6 foretell the wise men bringing gifts to Jesus.",
+      "cited": [
+        "Matthew 2:1-11",
+        "Psalms 72:10-11",
+        "Isaiah 60:6"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "60:1-14",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "60:6",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "72:1-20",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "72:10-11",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-096",
+      "claim": "The name Immanuel, 'God with us', in Isaiah 7:14 shows that the child is God.",
+      "cited": [
+        "Matthew 1:23",
+        "Isaiah 7:14"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "7:14",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "8:8",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "8:10",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-097",
+      "claim": "Jeremiah 31:22, 'A woman shall compass a man', foretells the virgin birth.",
+      "cited": [
+        "Jeremiah 31:22"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Jeremiah",
+          "ref": "31:20-21",
+          "role": "context",
+          "kjv": "31:21-22",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Jeremiah",
+          "ref": "31:21",
+          "role": "cited",
+          "kjv": "31:22",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-098",
+      "claim": "Psalm 2:1-2, the rulers taking counsel against the LORD's anointed, foretells Herod and Pilate against Jesus.",
+      "cited": [
+        "Acts 4:25-28",
+        "Psalms 2:1-2"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Psalms",
+          "ref": "2:1-2",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "2:1-12",
+          "role": "context",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-099",
+      "claim": "Ezekiel 34:23, the one shepherd, 'my servant David', is Jesus the good shepherd.",
+      "cited": [
+        "John 10:11",
+        "John 10:16",
+        "Ezekiel 34:23"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Ezekiel",
+          "ref": "34:11-31",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Ezekiel",
+          "ref": "34:23-24",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Ezekiel",
+          "ref": "37:24-25",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-100",
+      "claim": "The manna in the wilderness foreshadows Jesus, the bread from heaven.",
+      "cited": [
+        "John 6:31-35",
+        "Exodus 16:4",
+        "Psalms 78:24"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Exodus",
+          "ref": "16:4",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Exodus",
+          "ref": "16:4-15",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "78:24",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-101",
+      "claim": "Jacob's ladder foreshadows Jesus, on whom the angels of God ascend and descend.",
+      "cited": [
+        "John 1:51",
+        "Genesis 28:12"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Genesis",
+          "ref": "28:10-17",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Genesis",
+          "ref": "28:12",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-102",
+      "claim": "Isaiah saw the glory of Jesus in his vision of the LORD on the throne.",
+      "cited": [
+        "John 12:41",
+        "Isaiah 6:1"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "6:1",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "6:1-5",
+          "role": "context",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-103",
+      "claim": "Isaiah 22:22, the key of the house of David, speaks of Jesus.",
+      "cited": [
+        "Revelation 3:7",
+        "Isaiah 22:22"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "22:15-25",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "22:22",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-104",
+      "claim": "The stone cut out without hands in Daniel 2 is the kingdom Jesus founded at his first coming.",
+      "cited": [
+        "Daniel 2:34-35",
+        "Daniel 2:44-45"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Daniel",
+          "ref": "2:31-45",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Daniel",
+          "ref": "2:34-35",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Daniel",
+          "ref": "2:44-45",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-105",
+      "claim": "Isaiah 25:8 and Hosea 13:14, death swallowed up in victory, are fulfilled in the resurrection through Jesus.",
+      "cited": [
+        "1 Corinthians 15:54-55",
+        "Isaiah 25:8",
+        "Hosea 13:14"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "25:6-9",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "25:8",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Hosea",
+          "ref": "13:12-14:1",
+          "role": "context",
+          "kjv": "13:12-16",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Hosea",
+          "ref": "13:14",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-106",
+      "claim": "Amos 9:11-12, the tabernacle of David rebuilt, is fulfilled in the Gentiles joining the Church.",
+      "cited": [
+        "Acts 15:15-17",
+        "Amos 9:11-12"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Amos",
+          "ref": "9:8-15",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Amos",
+          "ref": "9:11-12",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-107",
+      "claim": "Isaiah 49:6 and 42:6, 'a light to the Gentiles', speak of Jesus.",
+      "cited": [
+        "Acts 13:47",
+        "Luke 2:32",
+        "Isaiah 49:6",
+        "Isaiah 42:6"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "42:5-9",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "42:6",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "49:1-7",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "49:3",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "49:6",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-108",
+      "claim": "Christ became a curse for us, as it is written, 'he that is hanged is accursed of God'.",
+      "cited": [
+        "Galatians 3:13",
+        "Deuteronomy 21:22-23"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Deuteronomy",
+          "ref": "21:18-23",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Deuteronomy",
+          "ref": "21:22-23",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-109",
+      "claim": "'Whosoever shall call on the name of the LORD shall be delivered' in Joel 2:32 means calling on the name of Jesus.",
+      "cited": [
+        "Romans 10:9-13",
+        "Acts 2:21",
+        "Joel 2:32"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Joel",
+          "ref": "3:1-5",
+          "role": "context",
+          "kjv": "2:28-32",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Joel",
+          "ref": "3:5",
+          "role": "cited",
+          "kjv": "2:32",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-110",
+      "claim": "Isaiah 45:23, 'unto me every knee shall bow', is spoken of Jesus.",
+      "cited": [
+        "Philippians 2:10-11",
+        "Romans 14:11",
+        "Isaiah 45:23"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "45:18-25",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "45:23",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-111",
+      "claim": "The stone of stumbling in Isaiah 8:14 and the corner stone in Isaiah 28:16 are Jesus.",
+      "cited": [
+        "Romans 9:33",
+        "1 Peter 2:6-8",
+        "Isaiah 8:14",
+        "Isaiah 28:16"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "8:11-15",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "8:14",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "28:14-18",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "28:16",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-112",
+      "claim": "Isaiah 59:20-21, 'the Redeemer shall come to Zion', foretells Jesus taking away the sins of Israel.",
+      "cited": [
+        "Romans 11:26-27",
+        "Isaiah 59:20-21"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "59:15-21",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "59:20-21",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-113",
+      "claim": "Isaiah 65:1-2 foretells the Gentiles finding God while Israel refuses.",
+      "cited": [
+        "Romans 10:20-21",
+        "Isaiah 65:1-2"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "65:1-2",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "65:1-7",
+          "role": "context",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-114",
+      "claim": "Deuteronomy 32:21 foretells that God would provoke Israel to jealousy through the Gentile Church.",
+      "cited": [
+        "Romans 10:19",
+        "Romans 11:11",
+        "Deuteronomy 32:21"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Deuteronomy",
+          "ref": "32:15-21",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Deuteronomy",
+          "ref": "32:21",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Deuteronomy",
+          "ref": "32:36-43",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-115",
+      "claim": "Isaiah 10:22-23 and 1:9 teach that only a remnant of Israel, those who believe in Jesus, will be saved.",
+      "cited": [
+        "Romans 9:27-29",
+        "Isaiah 10:22-23",
+        "Isaiah 1:9"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "1:2-9",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "1:9",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "10:20-23",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "10:22-23",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-116",
+      "claim": "The Scriptures foretold that God would blind Israel so that it would not believe.",
+      "cited": [
+        "Romans 11:8-10",
+        "Psalms 69:22-23",
+        "Isaiah 29:10",
+        "Deuteronomy 29:4"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Deuteronomy",
+          "ref": "29:1-8",
+          "role": "context",
+          "kjv": "29:2-9",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Deuteronomy",
+          "ref": "29:3",
+          "role": "cited",
+          "kjv": "29:4",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "29:9-14",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "29:10",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "69:23-24",
+          "role": "cited",
+          "kjv": "69:22-23",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-117",
+      "claim": "Psalm 32:1-2 teaches that God counts a person righteous apart from works.",
+      "cited": [
+        "Romans 4:6-8",
+        "Psalms 32:1-2"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Psalms",
+          "ref": "32:1-2",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "32:1-5",
+          "role": "context",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-118",
+      "claim": "Psalm 8:4-6, the son of man made a little lower than the angels, speaks of Jesus.",
+      "cited": [
+        "Hebrews 2:6-9",
+        "1 Corinthians 15:27",
+        "Psalms 8:4-6"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Psalms",
+          "ref": "8:2-10",
+          "role": "context",
+          "kjv": "8:1-9",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "8:5-7",
+          "role": "cited",
+          "kjv": "8:4-6",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-119",
+      "claim": "Leviticus 18:5, 'which if a man do, he shall live in them', shows that the Law is not of faith.",
+      "cited": [
+        "Galatians 3:12",
+        "Romans 10:5",
+        "Leviticus 18:5"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Leviticus",
+          "ref": "18:1-5",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Leviticus",
+          "ref": "18:5",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Ezekiel",
+          "ref": "20:11",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Nehemiah",
+          "ref": "9:29",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-120",
+      "claim": "Deuteronomy 30:11-14, 'the word is very nigh unto thee', speaks of the word of faith in Christ.",
+      "cited": [
+        "Romans 10:6-8",
+        "Deuteronomy 30:11-14"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Deuteronomy",
+          "ref": "30:1-20",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Deuteronomy",
+          "ref": "30:11-14",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-121",
+      "claim": "Hagar and Sarah are an allegory of two covenants: Sinai in bondage, and the free children of the promise.",
+      "cited": [
+        "Galatians 4:22-31",
+        "Genesis 21:9-12"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Genesis",
+          "ref": "17:19-21",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Genesis",
+          "ref": "21:1-13",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Genesis",
+          "ref": "21:9-12",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-122",
+      "claim": "The veil over Moses's face shows that a veil lies on the heart of Israel when the Law is read.",
+      "cited": [
+        "2 Corinthians 3:13-16",
+        "Exodus 34:29-35"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Exodus",
+          "ref": "34:27-35",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Exodus",
+          "ref": "34:29-35",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-123",
+      "claim": "Psalm 19:4, 'their line is gone out through all the earth', shows that Israel has heard the gospel.",
+      "cited": [
+        "Romans 10:18",
+        "Psalms 19:4"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Psalms",
+          "ref": "19:2-7",
+          "role": "context",
+          "kjv": "19:1-6",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "19:5",
+          "role": "cited",
+          "kjv": "19:4",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-124",
+      "claim": "Isaiah 52:7, 'How beautiful are the feet of him that bringeth good tidings', speaks of preaching the gospel of Christ.",
+      "cited": [
+        "Romans 10:15",
+        "Isaiah 52:7"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "52:7",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "52:7-12",
+          "role": "context",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-125",
+      "claim": "Isaiah 55:3, 'the sure mercies of David', foretells the resurrection of Jesus.",
+      "cited": [
+        "Acts 13:34",
+        "Isaiah 55:3"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "55:1-5",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "55:3",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-126",
+      "claim": "Psalm 132:11, 'Of the fruit of thy body will I set upon thy throne', is God's oath to raise up Christ.",
+      "cited": [
+        "Acts 2:30",
+        "Psalms 132:11"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Psalms",
+          "ref": "132:10-12",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "132:11",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-127",
+      "claim": "Isaiah 28:11-12, 'with another tongue will he speak to this people', foretells speaking in tongues.",
+      "cited": [
+        "1 Corinthians 14:21",
+        "Isaiah 28:11-12"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "28:7-13",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "28:11-12",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-128",
+      "claim": "The rock that gave Israel water in the wilderness was Christ.",
+      "cited": [
+        "1 Corinthians 10:4",
+        "Exodus 17:6",
+        "Numbers 20:11"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Exodus",
+          "ref": "17:1-7",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Exodus",
+          "ref": "17:6",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Numbers",
+          "ref": "20:11",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Deuteronomy",
+          "ref": "32:4",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-129",
+      "claim": "Psalm 102:25-27, 'of old hast thou laid the foundation of the earth', is addressed to the Son.",
+      "cited": [
+        "Hebrews 1:10-12",
+        "Psalms 102:25-27"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Psalms",
+          "ref": "102:1-3",
+          "role": "reply",
+          "kjv": "102:1-2 with the title",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "102:24-29",
+          "role": "context",
+          "kjv": "102:23-28",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "102:26-28",
+          "role": "cited",
+          "kjv": "102:25-27",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-130",
+      "claim": "The Scriptures command all the angels of God to worship the Son.",
+      "cited": [
+        "Hebrews 1:6",
+        "Psalms 97:7",
+        "Deuteronomy 32:43"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Deuteronomy",
+          "ref": "32:43",
+          "role": "cited",
+          "note": "The words quoted in Hebrews are found in the Greek version of this verse.",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "97:1-9",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "97:7",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-131",
+      "claim": "Isaiah 8:17-18, 'I and the children whom the LORD hath given me', is spoken by Jesus.",
+      "cited": [
+        "Hebrews 2:13",
+        "Isaiah 8:17-18"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "8:16-20",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "8:17-18",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-132",
+      "claim": "Psalm 95:7-11 shows that Joshua did not give Israel rest and that a rest remains, entered through Christ.",
+      "cited": [
+        "Hebrews 3:7-4:11",
+        "Psalms 95:7-11"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Joshua",
+          "ref": "21:41-43",
+          "role": "reply",
+          "kjv": "21:43-45",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "95:1-11",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "95:7-11",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-133",
+      "claim": "The earthly sanctuary and its service were only a shadow of heavenly things.",
+      "cited": [
+        "Hebrews 8:5",
+        "Hebrews 10:1",
+        "Exodus 25:40"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Exodus",
+          "ref": "25:8-9",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Exodus",
+          "ref": "25:40",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Exodus",
+          "ref": "29:42-46",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-134",
+      "claim": "The sacrifice of Jesus was offered once for all, and no further sacrifice for sin will ever be offered.",
+      "cited": [
+        "Hebrews 10:10-18",
+        "Hebrews 9:25-28"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "56:7",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Jeremiah",
+          "ref": "33:17-18",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Ezekiel",
+          "ref": "43:18-27",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Ezekiel",
+          "ref": "45:17-25",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Zechariah",
+          "ref": "14:21",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Malachi",
+          "ref": "3:3-4",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-135",
+      "claim": "The blood of bulls and goats could never take away sins.",
+      "cited": [
+        "Hebrews 10:4",
+        "Hebrews 10:11"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Leviticus",
+          "ref": "4:27-31",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Leviticus",
+          "ref": "5:11-13",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Leviticus",
+          "ref": "16:30",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Numbers",
+          "ref": "15:25",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-136",
+      "claim": "Habakkuk 2:3, 'it will surely come', foretells the coming of Jesus: 'he that shall come will come'.",
+      "cited": [
+        "Hebrews 10:37",
+        "Habakkuk 2:3"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Habakkuk",
+          "ref": "2:1-4",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Habakkuk",
+          "ref": "2:3",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-137",
+      "claim": "Abraham's offering of Isaac foreshadows God giving his only Son.",
+      "cited": [
+        "Hebrews 11:17-19",
+        "John 3:16",
+        "Genesis 22:2"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Genesis",
+          "ref": "22:1-19",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Genesis",
+          "ref": "22:2",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-138",
+      "claim": "The priesthood of Aaron was imperfect and was changed, and with it the Law.",
+      "cited": [
+        "Hebrews 7:11-12",
+        "Hebrews 7:18"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Exodus",
+          "ref": "29:9",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Exodus",
+          "ref": "40:15",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Numbers",
+          "ref": "25:10-13",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Jeremiah",
+          "ref": "33:17-22",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-139",
+      "claim": "There is one mediator between God and men, and no one comes to the Father except through Jesus.",
+      "cited": [
+        "1 Timothy 2:5",
+        "John 14:6",
+        "Hebrews 9:15"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Deuteronomy",
+          "ref": "4:7",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "55:6-7",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Jeremiah",
+          "ref": "29:12-13",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "34:19",
+          "role": "reply",
+          "kjv": "34:18",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "145:18",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-140",
+      "claim": "Abel's offering was accepted because it was a blood sacrifice.",
+      "cited": [
+        "Hebrews 11:4",
+        "Hebrews 12:24",
+        "Genesis 4:3-5"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Genesis",
+          "ref": "4:1-7",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Genesis",
+          "ref": "4:3-5",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Leviticus",
+          "ref": "2:1-2",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-141",
+      "claim": "The blood of the covenant at Sinai foreshadows the blood of Jesus, shed for the remission of sins.",
+      "cited": [
+        "Matthew 26:28",
+        "Hebrews 9:18-22",
+        "Exodus 24:8"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Exodus",
+          "ref": "24:3-8",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Exodus",
+          "ref": "24:8",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-142",
+      "claim": "The Day of Atonement was fulfilled when Jesus entered the holy place once with his own blood.",
+      "cited": [
+        "Hebrews 9:7-12",
+        "Leviticus 16:15-22"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Leviticus",
+          "ref": "16:1-34",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Leviticus",
+          "ref": "16:15-22",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Leviticus",
+          "ref": "16:29-34",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-143",
+      "claim": "Micah 5:2, 'whose goings forth have been from of old, from everlasting', shows that the Messiah existed from eternity.",
+      "cited": [
+        "Micah 5:2",
+        "John 8:58"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Amos",
+          "ref": "9:11",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Micah",
+          "ref": "5:1",
+          "role": "cited",
+          "kjv": "5:2",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Micah",
+          "ref": "7:14",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Malachi",
+          "ref": "3:4",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-144",
+      "claim": "Genesis 19:24, 'the LORD rained brimstone from the LORD out of heaven', shows two persons called the LORD.",
+      "cited": [
+        "Genesis 19:24"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Genesis",
+          "ref": "4:23",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Genesis",
+          "ref": "19:23-25",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Genesis",
+          "ref": "19:24",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Kings I",
+          "ref": "8:1",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-145",
+      "claim": "The three men who appeared to Abraham in Genesis 18 show God appearing in human form, or as three persons.",
+      "cited": [
+        "Genesis 18:1-2"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Genesis",
+          "ref": "18:1-2",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Genesis",
+          "ref": "18:1-22",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Genesis",
+          "ref": "19:1",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-146",
+      "claim": "The Hebrew word for God, Elohim, is plural and so points to more than one person in God.",
+      "cited": [
+        "Genesis 1:1"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Genesis",
+          "ref": "1:1",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Exodus",
+          "ref": "7:1",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Judges",
+          "ref": "16:23",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Kings I",
+          "ref": "11:33",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-147",
+      "claim": "God says 'us' in Genesis 3:22 and 11:7 and Isaiah 6:8, showing a plurality of persons.",
+      "cited": [
+        "Genesis 3:22",
+        "Genesis 11:7",
+        "Isaiah 6:8"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Genesis",
+          "ref": "3:22",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Genesis",
+          "ref": "11:5-8",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Genesis",
+          "ref": "11:7",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Kings I",
+          "ref": "22:19-22",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "6:1-8",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "6:8",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Job",
+          "ref": "1:6",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Daniel",
+          "ref": "4:14",
+          "role": "reply",
+          "kjv": "4:17",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-148",
+      "claim": "'Holy, holy, holy' in Isaiah 6:3 points to the three persons of the Trinity.",
+      "cited": [
+        "Isaiah 6:3",
+        "Revelation 4:8"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "6:3",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Jeremiah",
+          "ref": "7:4",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Jeremiah",
+          "ref": "22:29",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Ezekiel",
+          "ref": "21:32",
+          "role": "reply",
+          "kjv": "21:27",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-149",
+      "claim": "Isaiah 48:16, 'the Lord GOD, and his Spirit, hath sent me', shows the three persons of the Trinity.",
+      "cited": [
+        "Isaiah 48:16"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "48:12-16",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "48:16",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-150",
+      "claim": "Isaiah 63:9-10, the angel of his presence and his holy Spirit, shows three persons in God.",
+      "cited": [
+        "Isaiah 63:9-10"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "63:7-14",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "63:9-10",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-151",
+      "claim": "The Angel of the LORD who speaks as God is Jesus before his birth.",
+      "cited": [
+        "Genesis 16:7-13",
+        "Genesis 22:11-18",
+        "Exodus 3:2-6",
+        "Judges 13:17-22"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Genesis",
+          "ref": "16:7-13",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Genesis",
+          "ref": "22:11-18",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Exodus",
+          "ref": "3:2-6",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Exodus",
+          "ref": "23:20-23",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Judges",
+          "ref": "13:17-22",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Haggai",
+          "ref": "1:13",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Malachi",
+          "ref": "2:7",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-152",
+      "claim": "The man who wrestled with Jacob was God in human form.",
+      "cited": [
+        "Genesis 32:24-30"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Genesis",
+          "ref": "32:25-31",
+          "role": "cited",
+          "kjv": "32:24-30",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Hosea",
+          "ref": "12:4-5",
+          "role": "reply",
+          "kjv": "12:3-4",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-153",
+      "claim": "Zechariah 14:3-4, the LORD's feet standing on the mount of Olives, foretells the return of Jesus.",
+      "cited": [
+        "Acts 1:11-12",
+        "Zechariah 14:3-4"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Zechariah",
+          "ref": "14:1-9",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Zechariah",
+          "ref": "14:3-4",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-154",
+      "claim": "Zechariah 2:10-11, 'I will dwell in the midst of thee ... the LORD of hosts hath sent me', shows the LORD sent by the LORD.",
+      "cited": [
+        "Zechariah 2:10-11"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Zechariah",
+          "ref": "2:10-17",
+          "role": "context",
+          "kjv": "2:6-13",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Zechariah",
+          "ref": "2:14-15",
+          "role": "cited",
+          "kjv": "2:10-11",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-155",
+      "claim": "The fourth man in the furnace, 'like the Son of God', was Jesus.",
+      "cited": [
+        "Daniel 3:25"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Daniel",
+          "ref": "3:24-28",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Daniel",
+          "ref": "3:25",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-156",
+      "claim": "Wisdom in Proverbs 8:22-31, with God before the creation, is Christ.",
+      "cited": [
+        "1 Corinthians 1:24",
+        "Colossians 1:15-17",
+        "Proverbs 8:22-31"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Proverbs",
+          "ref": "3:19",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Proverbs",
+          "ref": "8:1-36",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Proverbs",
+          "ref": "8:22-31",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-157",
+      "claim": "The Word by which God created all things is a divine person, who became flesh in Jesus.",
+      "cited": [
+        "John 1:1-3",
+        "John 1:14",
+        "Genesis 1:3"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Genesis",
+          "ref": "1:3",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "55:11",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "33:6",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "33:9",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-158",
+      "claim": "Isaiah 44:6, 'the LORD the King of Israel, and his redeemer the LORD of hosts', names two who are the LORD.",
+      "cited": [
+        "Revelation 1:17",
+        "Isaiah 44:6"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "44:6",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "44:6-8",
+          "role": "context",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-159",
+      "claim": "Jesus took the divine name of Exodus 3:14 when he said 'Before Abraham was, I am'.",
+      "cited": [
+        "John 8:58",
+        "Exodus 3:14"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Exodus",
+          "ref": "3:13-15",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Exodus",
+          "ref": "3:14",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-160",
+      "claim": "Since God says 'beside me there is no saviour', Jesus the Saviour must be God.",
+      "cited": [
+        "Titus 2:13",
+        "Luke 2:11",
+        "Isaiah 43:11"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Judges",
+          "ref": "3:9",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Judges",
+          "ref": "3:15",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "43:10-13",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "43:11",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Obadiah",
+          "ref": "1:21",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Nehemiah",
+          "ref": "9:27",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-161",
+      "claim": "Jesus is to be worshipped and honoured even as the Father is.",
+      "cited": [
+        "John 5:23",
+        "Philippians 2:9-11",
+        "Matthew 28:17"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Deuteronomy",
+          "ref": "4:35",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Deuteronomy",
+          "ref": "32:39",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "42:8",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "43:10-11",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "45:5-6",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-162",
+      "claim": "Jesus is the only begotten Son of God.",
+      "cited": [
+        "John 3:16",
+        "John 1:18"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Exodus",
+          "ref": "4:22-23",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Deuteronomy",
+          "ref": "14:1",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Jeremiah",
+          "ref": "31:8",
+          "role": "reply",
+          "kjv": "31:9",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Hosea",
+          "ref": "2:1",
+          "role": "reply",
+          "kjv": "1:10",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "89:27-28",
+          "role": "reply",
+          "kjv": "89:26-27",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-163",
+      "claim": "Isaiah 64:6, 'all our righteousnesses are as filthy rags', shows that good deeds are worthless before God.",
+      "cited": [
+        "Isaiah 64:6"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "64:4-8",
+          "role": "context",
+          "kjv": "64:5-9",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "64:5",
+          "role": "cited",
+          "kjv": "64:6",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-164",
+      "claim": "Jeremiah 17:9, 'The heart is deceitful above all things, and desperately wicked', shows that man cannot do good.",
+      "cited": [
+        "Jeremiah 17:9"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Jeremiah",
+          "ref": "17:5-10",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Jeremiah",
+          "ref": "17:9",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-165",
+      "claim": "Psalm 51:5, 'in sin did my mother conceive me', teaches that everyone is born a sinner.",
+      "cited": [
+        "Psalms 51:5"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Psalms",
+          "ref": "51:3-14",
+          "role": "context",
+          "kjv": "51:1-12",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "51:7",
+          "role": "cited",
+          "kjv": "51:5",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-166",
+      "claim": "Genesis 6:5 and 8:21 show that the human heart is wholly evil from birth.",
+      "cited": [
+        "Genesis 6:5",
+        "Genesis 8:21"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Genesis",
+          "ref": "4:7",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Genesis",
+          "ref": "6:5",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Genesis",
+          "ref": "6:9",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Genesis",
+          "ref": "8:21",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Deuteronomy",
+          "ref": "30:15-19",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-167",
+      "claim": "Isaiah 1:18, 'though your sins be as scarlet, they shall be as white as snow', is fulfilled through the blood of Jesus.",
+      "cited": [
+        "1 John 1:7",
+        "Isaiah 1:18"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "1:11-20",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "1:18",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-168",
+      "claim": "Ezekiel 36:25-27, a new heart and a new spirit, is the new birth that comes through faith in Jesus.",
+      "cited": [
+        "John 3:3-5",
+        "Ezekiel 36:25-27"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Ezekiel",
+          "ref": "36:22-38",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Ezekiel",
+          "ref": "36:25-27",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-169",
+      "claim": "Job 19:25, 'I know that my redeemer liveth', speaks of Jesus.",
+      "cited": [
+        "Job 19:25-26"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Job",
+          "ref": "19:23-27",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Job",
+          "ref": "19:25-26",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-170",
+      "claim": "Hosea 3:4-5 foretells Israel's long years without sacrifice until it turns to Jesus, the son of David.",
+      "cited": [
+        "Hosea 3:4-5"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Hosea",
+          "ref": "3:1-5",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Hosea",
+          "ref": "3:4-5",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-171",
+      "claim": "Hosea 5:15, 'I will go and return to my place, till they acknowledge their offence', foretells Jesus's ascension and his return when Israel repents of rejecting him.",
+      "cited": [
+        "Matthew 23:39",
+        "Hosea 5:15"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Hosea",
+          "ref": "5:14-6:3",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Hosea",
+          "ref": "5:15",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-172",
+      "claim": "Zechariah 6:12-13, the BRANCH who is a priest upon his throne, foretells Jesus as both king and priest.",
+      "cited": [
+        "Hebrews 8:1",
+        "Zechariah 6:12-13"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Zechariah",
+          "ref": "6:9-15",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Zechariah",
+          "ref": "6:12-13",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-173",
+      "claim": "Zechariah 3:8-9, 'my servant the BRANCH' and iniquity removed in one day, foretells the crucifixion.",
+      "cited": [
+        "Zechariah 3:8-9"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Zechariah",
+          "ref": "3:1-10",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Zechariah",
+          "ref": "3:8-9",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-174",
+      "claim": "The coats of skins God made for Adam and Eve were the first blood sacrifice to cover sin.",
+      "cited": [
+        "Genesis 3:21"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Genesis",
+          "ref": "3:17-24",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Genesis",
+          "ref": "3:21",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-175",
+      "claim": "Forgiveness of sins comes only through believing in the name of Jesus.",
+      "cited": [
+        "Acts 10:43",
+        "Acts 4:12",
+        "John 3:18"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "55:7",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Ezekiel",
+          "ref": "18:21-23",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Ezekiel",
+          "ref": "33:11",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Jonah",
+          "ref": "3:10",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "32:5",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Proverbs",
+          "ref": "28:13",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Chronicles II",
+          "ref": "7:14",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-176",
+      "claim": "Salvation is by grace through faith, and not by works.",
+      "cited": [
+        "Ephesians 2:8-9",
+        "Titus 3:5",
+        "Romans 3:28"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Deuteronomy",
+          "ref": "6:25",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Ezekiel",
+          "ref": "18:5-9",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Ezekiel",
+          "ref": "33:14-16",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Micah",
+          "ref": "6:8",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "15:1-5",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Ecclesiastes",
+          "ref": "12:13",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-177",
+      "claim": "Satan is a rebel angel who fell from heaven, as told in Isaiah 14 and Ezekiel 28.",
+      "cited": [
+        "Luke 10:18",
+        "Revelation 12:9",
+        "Isaiah 14:12-15",
+        "Ezekiel 28:12-19"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "14:3-23",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "14:12-15",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "45:7",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Ezekiel",
+          "ref": "28:1-19",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Ezekiel",
+          "ref": "28:12-19",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Zechariah",
+          "ref": "3:1-2",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Job",
+          "ref": "1:6-12",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-178",
+      "claim": "The serpent in Eden was Satan.",
+      "cited": [
+        "Revelation 12:9",
+        "Revelation 20:2",
+        "Genesis 3:1"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Genesis",
+          "ref": "3:1",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Genesis",
+          "ref": "3:1-15",
+          "role": "context",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-179",
+      "claim": "The dietary laws were abolished: all foods are now clean.",
+      "cited": [
+        "Mark 7:18-19",
+        "Acts 10:9-16",
+        "1 Timothy 4:3-5"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Leviticus",
+          "ref": "11:44-47",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Leviticus",
+          "ref": "20:25-26",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Deuteronomy",
+          "ref": "14:3-21",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "66:17",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-180",
+      "claim": "The Sabbath is no longer binding.",
+      "cited": [
+        "Colossians 2:16-17",
+        "Romans 14:5"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Exodus",
+          "ref": "31:16-17",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "56:2-7",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "58:13-14",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "66:22-23",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Jeremiah",
+          "ref": "17:21-27",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Ezekiel",
+          "ref": "20:12",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-181",
+      "claim": "Circumcision of the flesh is no longer required; true circumcision is of the heart.",
+      "cited": [
+        "Galatians 5:2-6",
+        "Romans 2:28-29"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Genesis",
+          "ref": "17:9-14",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Leviticus",
+          "ref": "12:3",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Deuteronomy",
+          "ref": "10:16",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Deuteronomy",
+          "ref": "30:6",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Joshua",
+          "ref": "5:2-9",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Ezekiel",
+          "ref": "44:9",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-182",
+      "claim": "The feasts of Israel were shadows fulfilled in Christ and need no longer be kept.",
+      "cited": [
+        "Colossians 2:16-17",
+        "Galatians 4:9-10"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Leviticus",
+          "ref": "23:14",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Leviticus",
+          "ref": "23:21",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Leviticus",
+          "ref": "23:31",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Leviticus",
+          "ref": "23:41",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Ezekiel",
+          "ref": "45:21-25",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Zechariah",
+          "ref": "14:16-19",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-183",
+      "claim": "The kingdom of God was taken from Israel and given to another nation.",
+      "cited": [
+        "Matthew 21:43"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Leviticus",
+          "ref": "26:44-45",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Samuel I",
+          "ref": "12:22",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "54:10",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Jeremiah",
+          "ref": "31:34-36",
+          "role": "reply",
+          "kjv": "31:35-37",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Jeremiah",
+          "ref": "33:24-26",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Malachi",
+          "ref": "3:6",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "94:14",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-184",
+      "claim": "The Church is the true Israel, and those who believe in Jesus are the children of Abraham.",
+      "cited": [
+        "Galatians 6:16",
+        "Romans 9:6-8",
+        "Galatians 3:29",
+        "1 Peter 2:9-10"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Deuteronomy",
+          "ref": "7:6-9",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "41:8-9",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Jeremiah",
+          "ref": "46:27-28",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Ezekiel",
+          "ref": "37:21-28",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Amos",
+          "ref": "9:14-15",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-185",
+      "claim": "The destruction of the Temple and the exile came because Israel rejected Jesus.",
+      "cited": [
+        "Matthew 23:37-38",
+        "Luke 19:41-44",
+        "1 Thessalonians 2:14-16"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Leviticus",
+          "ref": "26:40-45",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Deuteronomy",
+          "ref": "4:27-31",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Deuteronomy",
+          "ref": "30:1-10",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Ezekiel",
+          "ref": "36:16-24",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-186",
+      "claim": "God has given a further revelation through his Son that completes the Law and the Prophets.",
+      "cited": [
+        "Hebrews 1:1-2",
+        "John 1:17",
+        "Matthew 5:17"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Deuteronomy",
+          "ref": "4:2",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Deuteronomy",
+          "ref": "13:1",
+          "role": "reply",
+          "kjv": "12:32",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Deuteronomy",
+          "ref": "13:2-6",
+          "role": "reply",
+          "kjv": "13:1-5",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Deuteronomy",
+          "ref": "29:28",
+          "role": "reply",
+          "kjv": "29:29",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Malachi",
+          "ref": "3:22",
+          "role": "reply",
+          "kjv": "4:4",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-187",
+      "claim": "The miracles of Jesus prove that he is the Messiah and the Son of God.",
+      "cited": [
+        "John 20:30-31",
+        "Acts 2:22",
+        "John 10:37-38"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Exodus",
+          "ref": "7:11-12",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Exodus",
+          "ref": "7:22",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Deuteronomy",
+          "ref": "13:2-6",
+          "role": "reply",
+          "kjv": "13:1-5",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-188",
+      "claim": "God's temple is now the body of Christ and his people, not a building in Jerusalem.",
+      "cited": [
+        "John 2:19-21",
+        "1 Corinthians 3:16",
+        "Revelation 21:22"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Isaiah",
+          "ref": "2:2-3",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Ezekiel",
+          "ref": "37:26-28",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Ezekiel",
+          "ref": "43:1-7",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Micah",
+          "ref": "4:1-2",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Zechariah",
+          "ref": "6:12-13",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    }
+  ]
+}

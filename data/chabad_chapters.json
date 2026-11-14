@@ -1,0 +1,18 @@
+{
+  "_comment": "Chabad.org article ID (aid) of chapter 1 of each book. Chapters are consecutive IDs except Genesis, which is listed in full. Checked against chabad.org on 2026-11-14.",
+  "first_chapter_id": {
+    "Exodus": 9862, "Leviticus": 9902, "Numbers": 9929, "Deuteronomy": 9965,
+    "Joshua": 15785, "Judges": 15809, "Samuel I": 15830, "Samuel II": 15861,
+    "Kings I": 15885, "Kings II": 15907, "Isaiah": 15932, "Jeremiah": 15998,
+    "Ezekiel": 16099, "Hosea": 16155, "Joel": 16169, "Amos": 16173,
+    "Obadiah": 16182, "Jonah": 16183, "Micah": 16187, "Habakkuk": 16197,
+    "Haggai": 16203, "Zechariah": 16205, "Malachi": 16219, "Psalms": 16222,
+    "Proverbs": 16372, "Job": 16403, "Ecclesiastes": 16462, "Daniel": 16484,
+    "Nehemiah": 16508, "Chronicles I": 16521, "Chronicles II": 16550
+  },
+  "genesis_chapter_ids": [8165, 8166, 8167, 8168, 8169, 8171, 8170, 8172, 8173, 8174,
+    8175, 8176, 8208, 8209, 8210, 8211, 8212, 8213, 8214, 8215,
+    8216, 8217, 8218, 8219, 8220, 8221, 8222, 8223, 8224, 8225,
+    8226, 8227, 8228, 8229, 8230, 8231, 8232, 8233, 8234, 8235,
+    8236, 8237, 8238, 8239, 8240, 8241, 8242, 8243, 8244, 8245]
+}
