@@ -6,7 +6,6 @@
 Reads   data/claims.json            the claims and the passages listed against them
         data/texts/tanakh.json      JPS 1917 English + Hebrew text (public domain)
         data/texts/kjv.json         King James Version text (public domain)
-        data/chabad_chapters.json   Chabad.org chapter IDs, for links
         site/style.css              the one stylesheet
         site/workbench.js           the one script (search and filters on the front page)
 Writes  docs/                       the finished website (GitHub Pages serves this folder)
@@ -17,8 +16,9 @@ Every piece of text from the data files is HTML-escaped before it is written,
 so nothing in the data can add markup or scripts to a page. When it finishes,
 the build runs check_output() over everything it wrote and refuses to finish
 if any page contains a script other than site/workbench.js, an inline event
-handler, a frame other than the front page's reader pane, or loads anything
-from another website.
+handler, a frame other than the front page's reader pane, or any link to or
+resource from another website. The site is self-contained: it links only to
+its own pages.
 """
 
 import html
@@ -37,7 +37,7 @@ SCRIPT = "workbench.js"
 # site (there is exactly one script, workbench.js, and one frame, the reader
 # pane on the front page). Nothing else may be loaded, and the browser blocks
 # all network requests from the script (default-src 'none'). Forms may submit
-# only to this site. Links to Chabad.org and Sefaria still work as links.
+# only to this site. The pages contain no links to other websites at all.
 CSP = ("default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; "
        "frame-src 'self'; base-uri 'none'; form-action 'self'")
 
@@ -45,20 +45,30 @@ ROLE_ORDER = {"cited": 0, "context": 1, "reply": 2}
 ROLE_GROUP = {
     "cited": "The verse the claim cites",
     "context": "Read it in context",
-    "reply": "Also cited in Orthodox responses",
+    "reply": "Other TaNaKh passages",
 }
+
+# Fixed wording for the source check on each claim. A claim's "flags" pick
+# from these; the build fills in only verse references, so no free text (and
+# no commentary) can be added. "no-tanakh" is worked out from the citations.
+FLAG_TEXT = {
+    "no-tanakh": "This claim cites no verse of the TaNaKh.",
+    "not-in-tanakh": "The words {nt} quotes are not found in the TaNaKh. The passages below "
+                     "are the ones usually proposed as their source.",
+    "greek-wording": "{nt} follows the ancient Greek translation of {tanakh}, not the Hebrew. "
+                     "The Hebrew text is quoted below.",
+    "words-differ": "The words of {nt} differ from the Hebrew text of {tanakh}, which is quoted below.",
+    "wrong-book": "{nt} names {named} as the source, but the words are found in {tanakh}.",
+}
+FLAG_SHORT = {"no-tanakh": "No TaNaKh verse cited", "not-in-tanakh": "Not in the TaNaKh",
+              "greek-wording": "Follows the Greek, not the Hebrew", "words-differ": "Differs from the Hebrew",
+              "wrong-book": "Names the wrong book"}
 
 REF_RE = re.compile(r"^(?P<c1>\d+):(?P<v1>\d+)(?:-(?:(?P<c2>\d+):)?(?P<v2>\d+))?$")
 CITE_RE = re.compile(r"^(?P<book>.+) (?P<ref>\d+:\d+(?:-(?:\d+:)?\d+)?)$")
 
-SEFARIA_BOOK = {
-    "Samuel I": "I Samuel", "Samuel II": "II Samuel",
-    "Kings I": "I Kings", "Kings II": "II Kings",
-    "Chronicles I": "I Chronicles", "Chronicles II": "II Chronicles",
-}
-
-# Citations use King James book names; TaNaKh passages use Chabad.org names.
-# The book filter uses the Chabad.org name for TaNaKh books.
+# Citations use King James book names; TaNaKh passages use Hebrew-Bible style
+# names ("Samuel I"). The book filter uses the latter for TaNaKh books.
 KJV_TO_TANAKH = {
     "1 Samuel": "Samuel I", "2 Samuel": "Samuel II",
     "1 Kings": "Kings I", "2 Kings": "Kings II",
@@ -84,13 +94,14 @@ BOOK_GROUPS = [
                        "Revelation"]),
 ]
 BOOK_ORDER = [b for _, books in BOOK_GROUPS for b in books]
+NT_BOOKS = set(BOOK_GROUPS[3][1])
 
 # The reader pane on the front page. The frame may only show this site's own
 # pages, which run no script; the sandbox also stops it from running script,
-# submitting forms, or navigating the main window except when clicked.
+# submitting forms, opening windows, or navigating the main window except when
+# a link in it is clicked.
 READER_IFRAME = ('<iframe id="reader" name="reader" title="Selected claim" src="welcome.html" '
-                 'sandbox="allow-same-origin allow-popups allow-popups-to-escape-sandbox '
-                 'allow-top-navigation-by-user-activation"></iframe>')
+                 'sandbox="allow-same-origin allow-top-navigation-by-user-activation"></iframe>')
 SCRIPT_TAG = f'<script src="{SCRIPT}" defer></script>'
 
 
@@ -140,20 +151,6 @@ def verse_list(ref, chapters):
         last = v2 if c == c2 else len(chapters[str(c)])
         out.extend((c, v) for v in range(first, last + 1))
     return out
-
-
-def chabad_url(book, ref, chabad):
-    chapter = int(ref.split(":")[0])
-    if book == "Genesis":
-        aid = chabad["genesis_chapter_ids"][chapter - 1]
-    else:
-        aid = chabad["first_chapter_id"][book] + chapter - 1
-    return f"https://www.chabad.org/library/bible_cdo/aid/{aid}/showrashi/true"
-
-
-def sefaria_url(book, ref):
-    name = SEFARIA_BOOK.get(book, book).replace(" ", "_")
-    return f"https://www.sefaria.org/{name}.{ref.replace(':', '.')}?lang=bi&with=Rashi"
 
 
 # ---------------------------------------------------------------- page frames
@@ -228,7 +225,7 @@ def verses_html(verses, chapter_text, lang, highlight, show_chapter):
     return " ".join(parts)
 
 
-def passage_html(p, anchor, tanakh, chabad, highlight, ext):
+def passage_html(p, anchor, tanakh, highlight):
     book, ref = p["book"], p["ref"]
     chapters = tanakh[book]
     verses = verse_list(ref, {c: t["en"] for c, t in chapters.items()})
@@ -239,7 +236,6 @@ def passage_html(p, anchor, tanakh, chabad, highlight, ext):
         badges.append(f'<span class="badge">KJV: {esc(p["kjv"])}</span>')
     if p.get("verified"):
         badges.append('<span class="badge verified">&#10003; verified</span>')
-    note = f'<p class="note">{esc(p["note"])}</p>' if p.get("note") else ""
     source = f'<p class="source">Source: {esc(p["source"])}</p>' if p.get("source") else ""
 
     en = verses_html(verses, chapters, "en", highlight, multi_chapter)
@@ -248,13 +244,11 @@ def passage_html(p, anchor, tanakh, chabad, highlight, ext):
     title = f'<h4>{esc(book)} {esc(ref)}</h4>{"".join(badges)}'
 
     inner = f"""<div class="p-body">
-{note}<div class="he" lang="he" dir="rtl">{he}</div>
+<div class="he" lang="he" dir="rtl">{he}</div>
 <div class="en">{en}</div>
 {source}</div>
 <div class="p-foot">
-<span class="attrib">JPS 1917 · Hebrew verse numbering</span>
-<span class="links"><a class="btn" href="{esc(chabad_url(book, ref, chabad))}"{ext}>Chabad.org + Rashi</a>
-<a class="btn" href="{esc(sefaria_url(book, ref))}"{ext}>Sefaria</a></span>
+<span class="attrib">Hebrew: Tanach with Nikkud · English: JPS 1917 · Hebrew verse numbering</span>
 </div>"""
 
     # The verse the claim cites is always open. Context is folded away, and
@@ -313,7 +307,8 @@ def search_text(claim):
     for p in claim["passages"]:
         parts.append(f'{p["book"]} {p["ref"]}')
         parts.append(TANAKH_TO_KJV.get(p["book"], ""))  # so "1 Samuel" finds "Samuel I"
-        parts.extend(p.get(k) or "" for k in ("kjv", "note", "source"))
+        parts.extend(p.get(k) or "" for k in ("kjv", "source"))
+    parts.extend(FLAG_SHORT[f["kind"]] for f in claim_flags(claim))
     return " ".join(x for x in parts if x).lower()
 
 
@@ -329,15 +324,41 @@ def anchors_for(passages):
 
 # ---------------------------------------------------------------- claim pages
 
-def claim_article(i, claims, tanakh, kjv, chabad, status_note, in_panel):
+def claim_flags(claim):
+    """The claim's source-check flags, including "no-tanakh" when it cites no TaNaKh verse."""
+    flags = list(claim.get("flags", []))
+    # "Not in the TaNaKh" already says it; don't also say "no TaNaKh verse cited".
+    if all(cite_book(c) in NT_BOOKS for c in claim["cited"]) and \
+            not any(f["kind"] == "not-in-tanakh" for f in flags):
+        flags.insert(0, {"kind": "no-tanakh"})
+    return flags
+
+
+def and_list(items):
+    items = list(items)
+    return items[0] if len(items) == 1 else ", ".join(items[:-1]) + " and " + items[-1]
+
+
+def flags_html(claim):
+    flags = claim_flags(claim)
+    if not flags:
+        return ""
+    items = "".join(
+        f'<li class="flag {f["kind"]}"><strong>{esc(FLAG_SHORT[f["kind"]])}.</strong> '
+        + esc(FLAG_TEXT[f["kind"]].format(nt=and_list(f.get("nt", [])) if f.get("nt") else "",
+                                          tanakh=f.get("tanakh", ""), named=f.get("named", "")))
+        + "</li>" for f in flags)
+    return f'<section class="source-check" aria-label="Source check"><ul>{items}</ul></section>'
+
+
+def claim_article(i, claims, tanakh, kjv, status_note, in_panel):
     """The body of a claim: used for the full page /n/ and the reader pane /n/panel.html."""
     claim = claims[i]
     n = claim_number(claim["id"])
     passages = sorted(claim["passages"], key=lambda p: ROLE_ORDER[p["role"]])
     anchors = anchors_for(passages)
-    # In the reader pane, site links open in the main window and other sites in a new tab.
+    # In the reader pane, links to other pages of the site open in the main window.
     top = ' target="_top"' if in_panel else ""
-    ext = ' target="_blank" rel="noopener"' if in_panel else ""
 
     # Verses the claim itself cites, highlighted wherever they appear in a
     # wider passage on the same page.
@@ -354,8 +375,8 @@ def claim_article(i, claims, tanakh, kjv, chabad, status_note, in_panel):
             continue
         hint = ('<p class="hint">Highlighted verses are the ones the claim cites.</p>'
                 if role == "context" and highlight else "")
-        cards = "".join(passage_html(p, a, tanakh, chabad,
-                                     set() if role == "cited" else highlight.get(p["book"], set()), ext)
+        cards = "".join(passage_html(p, a, tanakh,
+                                     set() if role == "cited" else highlight.get(p["book"], set()))
                         for p, a in these)
         groups.append(f'<h3 class="group-h {role}">{esc(ROLE_GROUP[role])}</h3>{hint}{cards}')
         toc.extend(f'<li><a class="chip {role}" href="#{a}">{esc(p["book"])} {esc(p["ref"])}</a></li>'
@@ -382,6 +403,7 @@ def claim_article(i, claims, tanakh, kjv, chabad, status_note, in_panel):
 <span class="sep">answered from</span> {book_links(answer_books(claim), 'answers')}</dd>
 </dl>
 </header>
+{flags_html(claim)}
 <p class="draft">{esc(claim.get('status_note') or status_note)}</p>
 {response_html(claim.get('response', ''))}
 <section class="cited-by-claim">
@@ -395,7 +417,7 @@ def claim_article(i, claims, tanakh, kjv, chabad, status_note, in_panel):
 </article>"""
 
 
-def claim_page(i, claims, tanakh, kjv, chabad, status_note):
+def claim_page(i, claims, tanakh, kjv, status_note):
     claim = claims[i]
 
     def nav_link(j, rel, label):
@@ -405,14 +427,14 @@ def claim_page(i, claims, tanakh, kjv, chabad, status_note):
 
     prev_link = nav_link(i - 1, "prev", f'&larr; {esc(claims[i - 1]["id"])}' if i > 0 else "")
     next_link = nav_link(i + 1, "next", f'{esc(claims[i + 1]["id"])} &rarr;' if i + 1 < len(claims) else "")
-    body = (claim_article(i, claims, tanakh, kjv, chabad, status_note, in_panel=False)
+    body = (claim_article(i, claims, tanakh, kjv, status_note, in_panel=False)
             + f'\n<nav class="prevnext">{prev_link}<a class="btn" href="../">All claims</a>{next_link}</nav>')
     return page(f"{claim['id']}: {claim['claim']} · Emet", body, depth=1, description=claim["claim"])
 
 
-def claim_panel(i, claims, tanakh, kjv, chabad, status_note):
+def claim_panel(i, claims, tanakh, kjv, status_note):
     claim = claims[i]
-    body = claim_article(i, claims, tanakh, kjv, chabad, status_note, in_panel=True)
+    body = claim_article(i, claims, tanakh, kjv, status_note, in_panel=True)
     return panel(f"{claim['id']} · Emet", body, up="../")
 
 
@@ -443,7 +465,9 @@ def result_row(claim):
             f'<span class="id">{esc(claim["id"])}</span>'
             f'<span class="text">{esc(claim["claim"])}</span>'
             f'<span class="refs">{esc(" · ".join(claim["cited"]))}</span>'
-            f'<span class="pcount">{count} passage{"s" if count != 1 else ""}</span>'
+            f'<span class="pcount">{count} passage{"s" if count != 1 else ""}'
+            + "".join(f' <span class="rflag">{esc(FLAG_SHORT[f["kind"]])}</span>' for f in claim_flags(claim))
+            + '</span>'
             f'</a></li>')
 
 
@@ -452,31 +476,26 @@ def index_page(doc):
     grid = "".join(f'<a href="{claim_number(c["id"])}/">{claim_number(c["id"])}</a>' for c in claims)
     rows = "\n".join(result_row(c) for c in claims)
     body = f"""<div class="workbench">
-<aside class="wb-side" aria-label="Find claims">
-<p class="intro">{esc(doc['subtitle'])}.</p>
-<form id="search" class="filters" role="search" action="./" method="get">
-  <label class="field-label" for="q">Search</label>
+<form id="search" class="toolbar" role="search" action="./" method="get">
   <div class="search-row">
-    <input id="q" type="search" name="q" placeholder="42, virgin, Isaiah 53" autocomplete="off" spellcheck="false">
+    <label class="visually-hidden" for="q">Search by claim number, word or verse</label>
+    <input id="q" type="search" name="q" placeholder="Search: 42, virgin, Isaiah 53"
+      autocomplete="off" spellcheck="false" enterkeyhint="go">
     <button type="submit">Go</button>
   </div>
-  <p class="kbd-hint">A number + <kbd>Enter</kbd> opens that claim. <kbd>/</kbd> jumps here.</p>
-  <label class="field-label" for="book">Book</label>
-  <select id="book" name="book"><option value="">All books</option>{book_options(claims)}</select>
-  <fieldset id="where" class="seg">
-    <legend class="visually-hidden">Where the book appears</legend>
-    <label><input type="radio" name="in" value="" checked><span>Anywhere</span></label>
-    <label><input type="radio" name="in" value="cites"><span>Cited</span></label>
-    <label><input type="radio" name="in" value="answers"><span>In answer</span></label>
-  </fieldset>
-  <p class="clear"><a href="./">Clear search and filters</a></p>
+  <div class="book-row">
+    <label class="visually-hidden" for="book">Book</label>
+    <select id="book" name="book"><option value="">All books</option>{book_options(claims)}</select>
+    <fieldset id="where" class="seg">
+      <legend class="visually-hidden">Where the book appears</legend>
+      <label><input type="radio" name="in" value="" checked><span>Any</span></label>
+      <label><input type="radio" name="in" value="cites"><span>Cited</span></label>
+      <label><input type="radio" name="in" value="answers"><span>In answer</span></label>
+    </fieldset>
+    <a class="clear" href="./">Clear</a>
+  </div>
+  <p class="kbd-hint">Number + <kbd>Enter</kbd> opens a claim · <kbd>/</kbd> search · <kbd>&uarr;</kbd><kbd>&darr;</kbd> results</p>
 </form>
-<details id="numbers" class="numbers">
-<summary>Jump to a claim number</summary>
-<nav class="grid" aria-label="Claims by number">{grid}</nav>
-</details>
-<p class="draft side-draft">Unverified draft. <a href="about/">About this site</a>.</p>
-</aside>
 <section class="wb-results" aria-labelledby="list-heading">
 <div class="results-head">
 <h2 id="list-heading">All {len(claims)} claims</h2>
@@ -485,6 +504,11 @@ def index_page(doc):
 <ol id="claims" class="results">
 {rows}
 </ol>
+<details id="numbers" class="numbers">
+<summary>All claim numbers</summary>
+<nav class="grid" aria-label="Claims by number">{grid}</nav>
+</details>
+<p class="draft results-draft">{esc(doc['status_note'])} <a href="about/">About this site</a>.</p>
 </section>
 <section id="reader-pane" class="wb-reader" aria-label="Reader">
 {READER_IFRAME}
@@ -514,7 +538,7 @@ through the results.</li>
 <ul class="legend">
 <li><span class="dot cited"></span>The verse the claim cites, in Hebrew and JPS 1917 English.</li>
 <li><span class="dot context"></span>The verses around it, folded; the cited verse is highlighted.</li>
-<li><span class="dot reply"></span>Passages also cited in Orthodox responses.</li>
+<li><span class="dot reply"></span>Other TaNaKh passages on the same question.</li>
 </ul>
 <p class="stats">{counts['claims']} claims · {counts['passages']} TaNaKh passages ·
 {counts['verified']} verified</p>
@@ -551,7 +575,7 @@ def verses_page(doc):
                         f'<table class="verse-index">{"".join(rows)}</table></section>')
     toc = "".join(f'<a class="chip" href="#{slug(b)}">{esc(b)}</a>' for b in books)
     body = f"""<h1>TaNaKh passages</h1>
-<p class="lede">Every passage on this site, in Chabad.org book order and numbering. Each claim
+<p class="lede">Every passage on this site, in the order of the TaNaKh and in Hebrew verse numbering. Each claim
 link opens that claim at the passage.</p>
 <p class="chips toc">{toc}</p>
 {''.join(sections)}"""
@@ -565,9 +589,12 @@ def about_page(doc, counts):
 It holds verse citations, not commentary.</p>
 <ul>
 <li>The verses a claim cites are given in the numbering of the King James Version, and quoted from it.</li>
-<li>TaNaKh passages use the book names and verse numbering of the Chabad.org edition, which
-sometimes differ from the King James Version; where they do, the passage says so. Each passage
-links to its chapter on Chabad.org, with Rashi, and to Sefaria.</li>
+<li>TaNaKh passages use the Hebrew verse numbering of the texts quoted, which
+sometimes differ from the King James Version; where they do, the passage says so.</li>
+<li>Some claims carry a <em>source check</em> in fixed wording: the claim cites no verse of the
+TaNaKh; the words it quotes are not in the TaNaKh; it follows the ancient Greek translation
+rather than the Hebrew; its words differ from the Hebrew; or it names the wrong book. In each
+case the Hebrew text is on the page to compare.</li>
 <li>{counts['sourced']} of {counts['passages']} passages name a source, and
 {counts['verified']} of {counts['passages']} have been verified against that source.
 A verified passage is marked &#10003;.</li>
@@ -590,8 +617,9 @@ opens in a reader beside the list.</li>
 <li>Verses cited by the claims: King James Version. Public domain. Text from bible-api.com.</li>
 </ul>
 <p>The JPS 1917 translation is used because it is in the public domain and follows the Hebrew
-verse numbering. For a modern translation and Rashi's commentary, follow the Chabad.org link
-beside each passage.</p>
+verse numbering.</p>
+<p>The site is self-contained: every text it quotes is stored in it, and it links to no other
+website, so nothing on it can go out of date because another site changed.</p>
 <h2>Privacy and safety</h2>
 <p>This site is static: plain HTML pages, one stylesheet, and one short script that runs the
 search and filters on the front page. It sets no cookies, collects nothing, sends nothing,
@@ -623,7 +651,7 @@ def not_found_page():
 
 
 def alias_page(target):
-    """A tiny page that forwards /042/ and /C-042/ to the real page /42/."""
+    """A tiny page that forwards /042/ and /c-042/ to the real page /42/."""
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -640,13 +668,62 @@ def alias_page(target):
 
 # ---------------------------------------------------------------- checks
 
-def validate(doc, tanakh, kjv, chabad):
+CLAIM_FIELDS = {"id", "claim", "cited", "response", "passages", "flags"}
+PASSAGE_FIELDS = {"book", "ref", "role", "kjv", "verified", "source"}
+FLAG_FIELDS = {"not-in-tanakh": {"kind", "nt"}, "greek-wording": {"kind", "nt", "tanakh"},
+               "words-differ": {"kind", "nt", "tanakh"}, "wrong-book": {"kind", "nt", "tanakh", "named"}}
+
+
+def ranges_overlap(book_a, ref_a, book_b, ref_b):
+    a, b = REF_RE.match(ref_a), REF_RE.match(ref_b)
+    if book_a != book_b or not a or not b:
+        return False
+    def ends(m):
+        c1, v1 = int(m["c1"]), int(m["v1"])
+        return (c1, v1), (int(m["c2"] or c1), int(m["v2"] or v1))
+    (s1, e1), (s2, e2) = ends(a), ends(b)
+    return s1 <= e2 and s2 <= e1
+
+
+def validate_flags(c):
+    """Each flag must name verses that are really on the claim's page."""
+    errors = []
+    for f in c.get("flags", []):
+        kind = f.get("kind")
+        if kind not in FLAG_FIELDS or set(f) != FLAG_FIELDS[kind]:
+            errors.append(f"{c['id']}: a flag needs exactly {FLAG_FIELDS.get(kind, 'a known kind')}: {f!r}")
+            continue
+        for nt in f["nt"]:
+            m = CITE_RE.match(nt)
+            if not m or not any(ranges_overlap(m["book"], m["ref"], cm["book"], cm["ref"])
+                                for cm in map(CITE_RE.match, c["cited"])):
+                errors.append(f"{c['id']}: flag names {nt!r}, which the claim does not cite")
+        if "tanakh" in f:
+            m = CITE_RE.match(f["tanakh"])
+            if not m or not any(ranges_overlap(m["book"], m["ref"], p["book"], p["ref"]) for p in c["passages"]):
+                errors.append(f"{c['id']}: flag names {f['tanakh']!r}, which is not among the claim's passages")
+    return errors
+
+
+def validate(doc, tanakh, kjv):
     errors = []
     seen = set()
     for c in doc["claims"]:
         if not re.fullmatch(r"C-\d{3}", c["id"]) or c["id"] in seen:
             errors.append(f"bad or duplicate id {c['id']!r}")
         seen.add(c["id"])
+        # The site is verse citation against verse citation: a claim holds only
+        # these fields, so nothing else (articles, links, commentary sources)
+        # can be added to it by accident.
+        extra = set(c) - CLAIM_FIELDS
+        if extra:
+            errors.append(f"{c['id']}: unknown field(s) {sorted(extra)}; a claim has only {sorted(CLAIM_FIELDS)}")
+        for p in c["passages"]:
+            extra = set(p) - PASSAGE_FIELDS
+            if extra:
+                errors.append(f"{c['id']}: passage {p.get('book')} {p.get('ref')} has unknown field(s) "
+                              f"{sorted(extra)}; a passage has only {sorted(PASSAGE_FIELDS)}")
+        errors.extend(validate_flags(c))
         for cite in c["cited"]:
             m = CITE_RE.match(cite)
             if not m or cite_book(cite) not in BOOK_ORDER:
@@ -661,8 +738,6 @@ def validate(doc, tanakh, kjv, chabad):
                 errors.append(f"{c['id']}: unknown role {p['role']!r}")
             if p["book"] not in BOOK_ORDER:
                 errors.append(f"{c['id']}: unknown book {p['book']!r}")
-            if p["book"] != "Genesis" and p["book"] not in chabad["first_chapter_id"]:
-                errors.append(f"{c['id']}: no Chabad.org chapter ID for book {p['book']!r}")
             try:
                 verse_list(p["ref"], {k: v["en"] for k, v in tanakh[p["book"]].items()})
             except Exception as e:  # noqa: BLE001
@@ -676,8 +751,8 @@ FORBIDDEN_HTML = [
     (re.compile(r"<\s*(object|embed|base|frame|frameset|applet)\b", re.I), "an object/embed/base/frame tag"),
     (re.compile(r"\son[a-z]+\s*=", re.I), "an inline event handler (onclick= etc.)"),
     (re.compile(r"javascript:", re.I), "a javascript: link"),
-    (re.compile(r"<(link|img|source|video|audio|script|iframe)\b[^>]*\b(href|src)=\"(https?:)?//", re.I),
-     "a resource loaded from another website"),
+    (re.compile(r"\b(href|src|action|url)=\"?(//|[a-z][a-z0-9+.-]*:)", re.I),
+     "a link to, or resource from, another website (the site links only to itself)"),
     (re.compile(r"<\s*form\b(?![^>]*\baction=\"(\.\./)*(\./)?index\.html\")", re.I),
      "a form that submits anywhere but this site's front page"),
     (re.compile(r"<\s*input\b(?![^>]*\btype=\"(search|radio)\")", re.I),
@@ -760,8 +835,7 @@ def main():
     doc = load("claims.json")
     tanakh = load("texts/tanakh.json")
     kjv = load("texts/kjv.json")
-    chabad = load("chabad_chapters.json")
-    validate(doc, tanakh, kjv, chabad)
+    validate(doc, tanakh, kjv)
 
     if OUT.exists():
         shutil.rmtree(OUT)
@@ -773,11 +847,14 @@ def main():
     claims = doc["claims"]
     for i, claim in enumerate(claims):
         n = claim_number(claim["id"])
-        args = (i, claims, tanakh, kjv, chabad, doc["status_note"])
+        args = (i, claims, tanakh, kjv, doc["status_note"])
         write(f"{n}/index.html", claim_page(*args))
         write(f"{n}/panel.html", claim_panel(*args))
-        # So that /042, /C-042 and /c-042 also reach /42 (GitHub Pages is case-sensitive).
-        for alias in {f"{n:03d}", claim["id"], claim["id"].lower()} - {str(n)}:
+        # So that /042 and /c-042 also reach /42. Only lower case: on a Mac,
+        # "C-042" and "c-042" are the same folder, so git would keep just one,
+        # and GitHub Pages (which is case-sensitive) would not find the other.
+        # The search box still accepts C-042 in any case.
+        for alias in {f"{n:03d}", claim["id"].lower()} - {str(n)}:
             write(f"{alias}/index.html", alias_page(n))
 
     passages = [p for c in claims for p in c["passages"]]

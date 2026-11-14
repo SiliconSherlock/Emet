@@ -10,6 +10,15 @@
         "Matthew 1:22-23",
         "Isaiah 7:14"
       ],
+      "flags": [
+        {
+          "kind": "greek-wording",
+          "nt": [
+            "Matthew 1:22-23"
+          ],
+          "tanakh": "Isaiah 7:14"
+        }
+      ],
       "response": "",
       "passages": [
         {
@@ -48,6 +57,15 @@
       "cited": [
         "Matthew 2:5-6",
         "Micah 5:2"
+      ],
+      "flags": [
+        {
+          "kind": "words-differ",
+          "nt": [
+            "Matthew 2:5-6"
+          ],
+          "tanakh": "Micah 5:1"
+        }
       ],
       "response": "",
       "passages": [
@@ -112,17 +130,15 @@
       "passages": [
         {
           "book": "Jeremiah",
-          "ref": "31:14",
+          "ref": "31:15",
           "role": "cited",
-          "kjv": "31:15",
           "verified": false,
           "source": null
         },
         {
           "book": "Jeremiah",
-          "ref": "31:14-16",
+          "ref": "31:15-17",
           "role": "context",
-          "kjv": "31:15-17",
           "verified": false,
           "source": null
         }
@@ -134,13 +150,20 @@
       "cited": [
         "Matthew 2:23"
       ],
+      "flags": [
+        {
+          "kind": "not-in-tanakh",
+          "nt": [
+            "Matthew 2:23"
+          ]
+        }
+      ],
       "response": "",
       "passages": [
         {
           "book": "Judges",
           "ref": "13:5",
           "role": "cited",
-          "note": "No verse in the TaNaKh has the words Matthew quotes. This is one of the verses usually proposed as its source.",
           "verified": false,
           "source": null
         },
@@ -148,7 +171,6 @@
           "book": "Isaiah",
           "ref": "11:1",
           "role": "cited",
-          "note": "No verse in the TaNaKh has the words Matthew quotes. This is one of the verses usually proposed as its source.",
           "verified": false,
           "source": null
         }
@@ -317,6 +339,15 @@
         "Hebrews 8:8-13",
         "Jeremiah 31:31-34"
       ],
+      "flags": [
+        {
+          "kind": "greek-wording",
+          "nt": [
+            "Hebrews 8:8-13"
+          ],
+          "tanakh": "Jeremiah 31:32"
+        }
+      ],
       "response": "",
       "passages": [
         {
@@ -336,17 +367,15 @@
         },
         {
           "book": "Jeremiah",
-          "ref": "31:30-33",
+          "ref": "31:31-34",
           "role": "cited",
-          "kjv": "31:31-34",
           "verified": false,
           "source": null
         },
         {
           "book": "Jeremiah",
-          "ref": "31:34-36",
+          "ref": "31:35-37",
           "role": "context",
-          "kjv": "31:35-37",
           "verified": false,
           "source": null
         }
@@ -365,6 +394,42 @@
           "ref": "9:5-6",
           "role": "cited",
           "kjv": "9:6-7",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "9:1-6",
+          "role": "context",
+          "kjv": "9:2-7",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Genesis",
+          "ref": "33:20",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Exodus",
+          "ref": "17:15",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Judges",
+          "ref": "6:24",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Jeremiah",
+          "ref": "33:16",
+          "role": "reply",
           "verified": false,
           "source": null
         }
@@ -802,9 +867,8 @@
         },
         {
           "book": "Jeremiah",
-          "ref": "31:28-29",
+          "ref": "31:29-30",
           "role": "reply",
-          "kjv": "31:29-30",
           "verified": false,
           "source": null
         },
@@ -1197,6 +1261,15 @@
         "Hebrews 10:5-7",
         "Psalms 40:6-8"
       ],
+      "flags": [
+        {
+          "kind": "greek-wording",
+          "nt": [
+            "Hebrews 10:5-7"
+          ],
+          "tanakh": "Psalms 40:7"
+        }
+      ],
       "response": "",
       "passages": [
         {
@@ -1204,6 +1277,14 @@
           "ref": "40:7-9",
           "role": "cited",
           "kjv": "40:6-8",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "40:2-13",
+          "role": "context",
+          "kjv": "40:1-12",
           "verified": false,
           "source": null
         }
@@ -1215,6 +1296,16 @@
       "cited": [
         "Matthew 27:9-10",
         "Zechariah 11:12-13"
+      ],
+      "flags": [
+        {
+          "kind": "wrong-book",
+          "nt": [
+            "Matthew 27:9-10"
+          ],
+          "named": "Jeremiah (“Jeremy”)",
+          "tanakh": "Zechariah 11:12-13"
+        }
       ],
       "response": "",
       "passages": [
@@ -1236,7 +1327,6 @@
           "book": "Zechariah",
           "ref": "11:12-13",
           "role": "cited",
-          "note": "They are in Zechariah; Matthew names Jeremiah.",
           "verified": false,
           "source": null
         }
@@ -1370,6 +1460,16 @@
         "Acts 2:25-31",
         "Acts 13:35",
         "Psalms 16:10"
+      ],
+      "flags": [
+        {
+          "kind": "greek-wording",
+          "nt": [
+            "Acts 2:25-31",
+            "Acts 13:35"
+          ],
+          "tanakh": "Psalms 16:10"
+        }
       ],
       "response": "",
       "passages": [
@@ -1506,6 +1606,21 @@
           "kjv": "4:5-6",
           "verified": false,
           "source": null
+        },
+        {
+          "book": "Malachi",
+          "ref": "3:19-24",
+          "role": "context",
+          "kjv": "4:1-6",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Kings II",
+          "ref": "2:11",
+          "role": "reply",
+          "verified": false,
+          "source": null
         }
       ]
     },
@@ -1523,6 +1638,21 @@
           "ref": "8:23-9:1",
           "role": "cited",
           "kjv": "9:1-2",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Isaiah",
+          "ref": "8:21-9:3",
+          "role": "context",
+          "kjv": "8:21-9:4",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Kings II",
+          "ref": "15:29",
+          "role": "reply",
           "verified": false,
           "source": null
         }
@@ -1863,6 +1993,15 @@
         "Ephesians 4:8",
         "Psalms 68:18"
       ],
+      "flags": [
+        {
+          "kind": "words-differ",
+          "nt": [
+            "Ephesians 4:8"
+          ],
+          "tanakh": "Psalms 68:19"
+        }
+      ],
       "response": "",
       "passages": [
         {
@@ -1870,6 +2009,14 @@
           "ref": "68:19",
           "role": "cited",
           "kjv": "68:18",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "68:16-19",
+          "role": "context",
+          "kjv": "68:15-18",
           "verified": false,
           "source": null
         }
@@ -1881,6 +2028,15 @@
       "cited": [
         "Matthew 12:17-21",
         "Isaiah 42:1-4"
+      ],
+      "flags": [
+        {
+          "kind": "greek-wording",
+          "nt": [
+            "Matthew 12:17-21"
+          ],
+          "tanakh": "Isaiah 42:4"
+        }
       ],
       "response": "",
       "passages": [
@@ -2884,6 +3040,15 @@
         "Isaiah 11:1",
         "Isaiah 11:10"
       ],
+      "flags": [
+        {
+          "kind": "greek-wording",
+          "nt": [
+            "Romans 15:12"
+          ],
+          "tanakh": "Isaiah 11:10"
+        }
+      ],
       "response": "",
       "passages": [
         {
@@ -3103,6 +3268,15 @@
         "Matthew 1:23",
         "Isaiah 7:14"
       ],
+      "flags": [
+        {
+          "kind": "greek-wording",
+          "nt": [
+            "Matthew 1:23"
+          ],
+          "tanakh": "Isaiah 7:14"
+        }
+      ],
       "response": "",
       "passages": [
         {
@@ -3138,17 +3312,15 @@
       "passages": [
         {
           "book": "Jeremiah",
-          "ref": "31:20-21",
+          "ref": "31:21-22",
           "role": "context",
-          "kjv": "31:21-22",
           "verified": false,
           "source": null
         },
         {
           "book": "Jeremiah",
-          "ref": "31:21",
+          "ref": "31:22",
           "role": "cited",
-          "kjv": "31:22",
           "verified": false,
           "source": null
         }
@@ -3400,6 +3572,15 @@
         "Acts 15:15-17",
         "Amos 9:11-12"
       ],
+      "flags": [
+        {
+          "kind": "greek-wording",
+          "nt": [
+            "Acts 15:15-17"
+          ],
+          "tanakh": "Amos 9:12"
+        }
+      ],
       "response": "",
       "passages": [
         {
@@ -3554,6 +3735,16 @@
         "Isaiah 8:14",
         "Isaiah 28:16"
       ],
+      "flags": [
+        {
+          "kind": "greek-wording",
+          "nt": [
+            "Romans 9:33",
+            "1 Peter 2:6-8"
+          ],
+          "tanakh": "Isaiah 28:16"
+        }
+      ],
       "response": "",
       "passages": [
         {
@@ -3592,6 +3783,15 @@
       "cited": [
         "Romans 11:26-27",
         "Isaiah 59:20-21"
+      ],
+      "flags": [
+        {
+          "kind": "words-differ",
+          "nt": [
+            "Romans 11:26-27"
+          ],
+          "tanakh": "Isaiah 59:20"
+        }
       ],
       "response": "",
       "passages": [
@@ -4145,13 +4345,21 @@
         "Psalms 97:7",
         "Deuteronomy 32:43"
       ],
+      "flags": [
+        {
+          "kind": "greek-wording",
+          "nt": [
+            "Hebrews 1:6"
+          ],
+          "tanakh": "Deuteronomy 32:43"
+        }
+      ],
       "response": "",
       "passages": [
         {
           "book": "Deuteronomy",
           "ref": "32:43",
           "role": "cited",
-          "note": "The words quoted in Hebrews are found in the Greek version of this verse.",
           "verified": false,
           "source": null
         },
@@ -4207,9 +4415,8 @@
       "passages": [
         {
           "book": "Joshua",
-          "ref": "21:41-43",
+          "ref": "21:43-45",
           "role": "reply",
-          "kjv": "21:43-45",
           "verified": false,
           "source": null
         },
@@ -5299,9 +5506,8 @@
         },
         {
           "book": "Jeremiah",
-          "ref": "31:8",
+          "ref": "31:9",
           "role": "reply",
-          "kjv": "31:9",
           "verified": false,
           "source": null
         },
@@ -6074,9 +6280,8 @@
         },
         {
           "book": "Jeremiah",
-          "ref": "31:34-36",
+          "ref": "31:35-37",
           "role": "reply",
-          "kjv": "31:35-37",
           "verified": false,
           "source": null
         },
@@ -6317,6 +6522,117 @@
         {
           "book": "Zechariah",
           "ref": "6:12-13",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-189",
+      "claim": "Genesis 22:8, 'God will provide himself a lamb', foretells Jesus as the Lamb of God.",
+      "cited": [
+        "John 1:29",
+        "Genesis 22:8"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Genesis",
+          "ref": "22:8",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Genesis",
+          "ref": "22:7-14",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Deuteronomy",
+          "ref": "12:31",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Jeremiah",
+          "ref": "19:5",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-190",
+      "claim": "The angel of Exodus 23:20-21, in whom is God's name, is the Son of God before he became man.",
+      "cited": [
+        "Exodus 23:20-21"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Exodus",
+          "ref": "23:20-21",
+          "role": "cited",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Exodus",
+          "ref": "23:20-25",
+          "role": "context",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Exodus",
+          "ref": "33:1-3",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "C-191",
+      "claim": "Psalm 89:27, 'I will make him my firstborn', speaks of Jesus, the firstborn of all creation.",
+      "cited": [
+        "Colossians 1:15",
+        "Psalms 89:27"
+      ],
+      "response": "",
+      "passages": [
+        {
+          "book": "Psalms",
+          "ref": "89:28",
+          "role": "cited",
+          "kjv": "89:27",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Psalms",
+          "ref": "89:21-30",
+          "role": "context",
+          "kjv": "89:20-29",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Exodus",
+          "ref": "4:22",
+          "role": "reply",
+          "verified": false,
+          "source": null
+        },
+        {
+          "book": "Jeremiah",
+          "ref": "31:9",
           "role": "reply",
           "verified": false,
           "source": null

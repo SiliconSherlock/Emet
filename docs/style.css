@@ -190,6 +190,7 @@ button {
 .seg input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; }
 .seg span {
   display: block;
+  white-space: nowrap;
   text-align: center;
   padding: .32rem .2rem;
   border-radius: 8px;
@@ -205,16 +206,37 @@ button {
 
 /* ---------- the workbench (front page) */
 
-.wb-side { padding: 1rem 16px; font-family: var(--sans); }
-.intro { font-family: var(--serif); font-style: italic; color: var(--muted); margin: 0 0 1rem; line-height: 1.45; }
-.field-label { display: block; font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin: 1rem 0 .35rem; }
-.filters .field-label:first-child { margin-top: 0; }
-.filters input[type="search"] { font-size: 1.1rem; padding: .65rem .85rem; }
-.kbd-hint { font-size: .78rem; color: var(--muted); margin: .45rem 0 0; }
-.clear { font-size: .85rem; margin: .8rem 0 0; }
+/* The toolbar runs full width across the top. On phones and tablets it stays
+   pinned to the top of the screen while the results scroll under it. */
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5rem .75rem;
+  padding: .65rem 16px;
+  background: var(--side-bg);
+  border-bottom: 1px solid var(--line-strong);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .06);
+  font-family: var(--sans);
+}
+.toolbar .search-row { flex: 1 1 22rem; }
+.toolbar input[type="search"] { font-size: 1.1rem; padding: .65rem .85rem; }
+.toolbar button { padding: 0 1.2rem; }
+.book-row { display: flex; flex: 1 1 26rem; align-items: center; gap: .5rem; min-width: 0; }
+.book-row select { flex: 1 1 10rem; width: auto; min-width: 0; padding: .6rem .6rem; }
+.book-row .seg { flex: 0 1 15rem; margin: 0; }
+.seg:disabled { display: none; }
+.clear { font-size: .88rem; white-space: nowrap; padding: 0 .2rem; }
+.kbd-hint { flex-basis: 100%; font-size: .75rem; color: var(--muted); margin: 0; display: none; }
+@media (hover: hover) and (pointer: fine) {
+  .kbd-hint { display: block; }
+}
 
-.numbers { margin-top: 1.25rem; border-top: 1px solid var(--line); padding-top: .8rem; }
-.numbers summary { font-size: .9rem; font-weight: 600; color: var(--accent); }
+.numbers { margin: 1rem 16px 0; }
+.numbers summary { font-family: var(--sans); font-size: .9rem; font-weight: 600; color: var(--accent); }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(2.6rem, 1fr)); gap: 4px; margin-top: .6rem; }
 .grid a {
   display: block;
@@ -222,15 +244,16 @@ button {
   padding: .4rem 0;
   border-radius: 7px;
   background: var(--accent-soft);
+  font-family: var(--sans);
   font-weight: 650;
   font-size: .9rem;
   font-variant-numeric: tabular-nums;
   text-decoration: none;
 }
 .grid a:hover { background: var(--accent); color: var(--on-accent); }
-.side-draft { margin-top: 1.25rem; }
+.results-draft { margin: 1rem 16px 1.5rem; }
 
-.results-head { padding: .6rem 16px .5rem; font-family: var(--sans); }
+.results-head { padding: .75rem 16px .5rem; font-family: var(--sans); }
 .results-head h2 { margin: 0; font-size: 1rem; }
 .search-status { font-size: .85rem; color: var(--muted); margin: .1rem 0 0; }
 .search-status:empty { display: none; }
@@ -251,28 +274,46 @@ button {
 .row .text { font-size: .98rem; line-height: 1.4; }
 .row .refs, .row .pcount { font-family: var(--sans); font-size: .76rem; color: var(--muted); }
 li.selected .row { background: var(--accent-soft); box-shadow: inset 4px 0 var(--accent); }
+.results li { scroll-margin-top: 9rem; }
 
 .wb-reader { display: none; }
 
-/* two columns: filters beside the results */
-@media (min-width: 760px) {
-  .workbench { display: grid; grid-template-columns: 17rem 1fr; align-items: start; }
-  .wb-side { position: sticky; top: 0; max-height: 100vh; overflow-y: auto; background: var(--side-bg); border-right: 1px solid var(--line); min-height: calc(100vh - 3.3rem); }
-  .wb-results { padding-bottom: 2rem; }
-  .results-head { padding-top: 1rem; }
+/* phones: a bit tighter, so the pinned toolbar leaves room for results */
+@media (max-width: 600px) {
+  .toolbar { padding: .5rem 12px; gap: .45rem; }
+  .toolbar .search-row, .book-row { flex-basis: 100%; }
+  .toolbar input[type="search"] { font-size: 1rem; padding: .6rem .75rem; }
+  .book-row select { padding: .5rem; font-size: .9rem; }
+  .book-row { flex-wrap: wrap; }
+  .book-row .seg { order: 3; flex: 1 1 100%; }
+  .results-head { padding: .6rem 12px .4rem; }
+  .results, .numbers, .results-draft { margin-left: 12px; margin-right: 12px; }
 }
 
-/* three panes: filters, results, reader. Each scrolls on its own. */
+/* wide screens: toolbar on top, then results and the reader side by side,
+   each scrolling on its own */
 @media (min-width: 1100px) {
   body.app { height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
   body.app main { flex: 1; min-height: 0; }
-  .workbench { grid-template-columns: 16.5rem minmax(21rem, 27rem) 1fr; height: 100%; align-items: stretch; }
-  .wb-side { position: static; max-height: none; min-height: 0; height: 100%; }
-  .wb-results { overflow-y: auto; border-right: 1px solid var(--line); padding-bottom: 0; background: var(--card); }
+  .workbench {
+    display: grid;
+    grid-template-columns: minmax(22rem, 30rem) 1fr;
+    grid-template-rows: auto minmax(0, 1fr);
+    height: 100%;
+  }
+  .toolbar { grid-column: 1 / -1; position: static; flex-wrap: nowrap; padding: .7rem 20px; }
+  .toolbar .search-row { flex: 1 1 26rem; max-width: 36rem; }
+  .book-row { flex: 0 1 34rem; }
+  .kbd-hint { flex: 0 0 auto; flex-basis: auto; white-space: nowrap; margin-left: auto; }
+  .wb-results { overflow-y: auto; border-right: 1px solid var(--line); background: var(--card); }
   .results-head { position: sticky; top: 0; z-index: 1; background: var(--card); border-bottom: 1px solid var(--line); padding: .8rem 1rem .6rem; }
   .results { margin: 0; border: 0; border-radius: 0; }
+  .results li { scroll-margin-top: 4rem; }
   .wb-reader { display: block; min-width: 0; background: var(--bg); }
   .wb-reader iframe { display: block; width: 100%; height: 100%; border: 0; }
+}
+@media (min-width: 1100px) and (max-width: 1350px) {
+  .kbd-hint { display: none !important; }
 }
 
 /* ---------- reader pane pages and the welcome page */
@@ -350,6 +391,32 @@ body.panel .claim-head { margin-top: 0; }
   line-height: 1.45;
 }
 .draft a { color: inherit; }
+
+/* ---------- source check (fixed wording, see FLAG_TEXT in build.py) */
+
+.source-check {
+  margin: 1rem 0;
+  padding: .7rem 1rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--context);
+  border-radius: 10px;
+  font-family: var(--sans);
+  font-size: .88rem;
+  line-height: 1.45;
+}
+.source-check ul { list-style: none; margin: 0; padding: 0; }
+.source-check li + li { margin-top: .45rem; }
+.rflag {
+  display: inline-block;
+  margin-left: .35rem;
+  font-size: .7rem;
+  font-weight: 700;
+  color: var(--muted);
+  border: 1px solid var(--line-strong);
+  border-radius: 4px;
+  padding: 0 .3em;
+}
 
 /* ---------- claim page */
 
@@ -476,7 +543,6 @@ blockquote { margin: .4rem 0 0; padding: 0; }
   border-top: 1px solid var(--line);
 }
 .attrib { font-family: var(--sans); font-size: .75rem; color: var(--muted); }
-.links { display: flex; flex-wrap: wrap; gap: .4rem; }
 
 /* folded passages and long citations: the header is the button */
 details > summary { list-style: none; cursor: pointer; }
@@ -514,7 +580,7 @@ summary:hover h4, summary:hover h3 { text-decoration: underline; text-underline-
 .verse-index .chip { font-size: .78rem; margin: .1rem .15rem .1rem 0; }
 
 @media print {
-  .top, .prevnext, footer, .toggle, .links, .claim-top .btn { display: none; }
+  .top, .prevnext, footer, .toggle, .claim-top .btn { display: none; }
   details > * { display: block; }
   body { background: #fff; color: #000; }
   .card, .passage { box-shadow: none; }

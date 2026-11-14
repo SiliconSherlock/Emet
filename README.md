@@ -7,12 +7,15 @@ it, for example `https://<your-site>/42`, and sees:
 - the claim, in one sentence;
 - the verses it cites, quoted from the King James Version;
 - the TaNaKh passages listed in answer, in Hebrew and in English (JPS 1917),
-  with the verses the claim cites highlighted in their context, and links to
-  each chapter on Chabad.org (with Rashi) and Sefaria.
+  with the verses the claim cites highlighted in their context.
+
+The site is self-contained: every text it shows is stored in it, and it links
+to no other website, so nothing on it can break because another site changed.
+The build refuses any link to another site.
 
 There are 188 claims (C-001 to C-188) and 586 TaNaKh passages.
 
-**In a debate:** type the number after the address (`/42`, `/042` and `/C-042`
+**In a debate:** type the number after the address (`/42`, `/042` and `/c-042`
 all work), or type it in any search box and press Enter.
 
 **For research:** the front page is a workbench. Search by words or verse
@@ -35,7 +38,6 @@ For the security review, see [SECURITY.md](SECURITY.md).
 
 ```
 data/claims.json            the content: every claim and its passages (edit this)
-data/chabad_chapters.json   Chabad.org chapter IDs, used to build links
 data/texts/tanakh.json      Hebrew + JPS 1917 English text (downloaded, public domain)
 data/texts/kjv.json         King James Version text (downloaded, public domain)
 site/style.css              the one stylesheet
@@ -89,8 +91,22 @@ fails the safety check.
 ```
 
 - `id`: `C-` and three digits. The page address is the number without zeros: `/1`.
-  `/001` and `/C-001` also work.
+  `/001` and `/c-001` (lower-case c) also work. `/C-001` with a capital C does
+  not: GitHub Pages addresses are case-sensitive. The search box accepts either.
 - `cited`: the verses the evangelical cites, in **King James** numbering.
+- `flags`: optional. The source check, shown above the passages in fixed
+  wording (no free text can be added). Each flag is one of:
+
+  | `kind` | Fields | Shown as |
+  |---|---|---|
+  | `not-in-tanakh` | `nt` | The words *nt* quotes are not found in the TaNaKh. |
+  | `greek-wording` | `nt`, `tanakh` | *nt* follows the ancient Greek translation of *tanakh*, not the Hebrew. |
+  | `words-differ` | `nt`, `tanakh` | The words of *nt* differ from the Hebrew text of *tanakh*. |
+  | `wrong-book` | `nt`, `named`, `tanakh` | *nt* names *named* as the source, but the words are found in *tanakh*. |
+
+  `nt` is a list of the claim's own citations; `tanakh` must be one of the
+  claim's passages. The build checks both. A claim that cites no TaNaKh verse
+  at all is labelled "No TaNaKh verse cited" automatically.
 - `response`: optional. Leave it empty, or write the answer in plain text;
   separate paragraphs with a blank line. When filled in, it is shown under the
   claim with the heading "Response". Plain text only: any HTML is shown as text.
@@ -102,14 +118,15 @@ fails the safety check.
   "verified": false, "source": null }
 ```
 
-- `book`: Chabad.org book name, e.g. `Isaiah`, `Psalms`, `Samuel I`, `Kings II`.
-- `ref`: chapter:verse in **Chabad.org (Hebrew)** numbering: `7:14`, `7:10-16`, `52:13-53:12`.
+- `book`: Hebrew-Bible book name, e.g. `Isaiah`, `Psalms`, `Samuel I`, `Kings II`.
+- `ref`: chapter:verse in the **Hebrew numbering of the texts quoted** (JPS 1917 and the
+  Hebrew text, as on Sefaria): `7:14`, `7:10-16`, `52:13-53:12`. This is the same as
+  Chabad.org's numbering except in a few chapters (Jeremiah 31 and Joshua 21 differ).
 - `role`: one of
   - `cited`: the verse the claim cites (shown first, always open);
   - `context`: the verses around it (folded, with the cited verse highlighted);
-  - `reply`: also commonly cited in Orthodox responses.
+  - `reply`: other TaNaKh passages on the same question.
 - `kjv`: optional. The King James numbering when it differs.
-- `note`: optional. A short note shown in italics.
 - `verified` / `source`: see below.
 
 Passages from a chapter not yet on the site need their text downloaded once:
@@ -130,6 +147,14 @@ lecture, book page, or article), set:
 
 The passage then shows a ✓ and the source, and the count on the About page
 goes up.
+
+## Research notes
+
+`research/singer-comparison.md` compares every claim with Rabbi Singer's
+articles on outreachjudaism.org: which claims he addresses, and which other
+passages he cites. It is a working aid for checking the passage lists. It is
+not part of the website, which deliberately holds only verse citations
+against verse citations: no articles, sources of commentary, or links.
 
 ## Previewing on your own computer
 

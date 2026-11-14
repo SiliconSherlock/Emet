@@ -34,7 +34,7 @@ USER_AGENT = "emet-static-site-text-fetch/1.0"
 JPS_1917 = "The Holy Scriptures: A New Translation (JPS 1917)"
 HEBREW = "Tanach with Nikkud"
 
-# Book names as used in claims.json (Chabad style) -> Sefaria names.
+# Book names as used in claims.json -> Sefaria names.
 SEFARIA_BOOK = {
     "Samuel I": "I Samuel", "Samuel II": "II Samuel",
     "Kings I": "I Kings", "Kings II": "II Kings",
@@ -63,6 +63,17 @@ USFM = {
     "1 Peter": "1PE", "2 Peter": "2PE", "1 John": "1JN", "2 John": "2JN",
     "3 John": "3JN", "Jude": "JUD", "Revelation": "REV",
 }
+
+# Sefaria's copy of JPS 1917 keeps a few footnote letters glued to the next
+# word ("athey" for "they"). Each fix names the verse and the exact text, and
+# is applied every time this script runs.
+JPS_FIXES = [
+    ("Genesis", 4, 1, "have agotten", "have gotten"),
+    ("Exodus", 23, 31, "unto athe River", "unto the River"),
+    ("Psalms", 132, 6, "field of athe wood", "field of the wood"),
+    ("Zechariah", 12, 10, "because athey have", "because they have"),
+    ("Judges", 6, 24, "called it a‘Adonai-shalom’", "called it ‘Adonai-shalom’"),
+]
 
 REF_RE = re.compile(r"^(?P<book>.+) (?P<c1>\d+):(?P<v1>\d+)(?:-(?:(?P<c2>\d+):)?(?P<v2>\d+))?$")
 
@@ -148,6 +159,13 @@ def main():
         print(f"KJV {book} {ch}: {len(verses)} verses")
         save(KJV_OUT, kjv)
         time.sleep(2.5)  # bible-api.com asks clients to stay under ~15 requests / 30 s
+
+    for book, ch, verse, wrong, right in JPS_FIXES:
+        verses = tanakh.get(book, {}).get(str(ch), {}).get("en")
+        if verses and wrong in verses[verse - 1]:
+            verses[verse - 1] = verses[verse - 1].replace(wrong, right)
+            print(f"Fixed {book} {ch}:{verse}: {wrong!r} -> {right!r}")
+    save(TANAKH_OUT, tanakh)
 
     print("Done.")
 
